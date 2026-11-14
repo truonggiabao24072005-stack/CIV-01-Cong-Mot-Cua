@@ -1,0 +1,12 @@
+﻿Đặc tả use case UC10,Đặc tả use case UC10
+Tên use case,Đăng ký tài khoản
+Actor,Người dân
+Mô tả,Thực hiện chức năng đăng ký tài khoản.
+Tiền điều kiện (Precondition),Chưa đăng nhập; tên đăng nhập chưa tồn tại.
+Hậu điều kiện (Postcondition),Tài khoản người dân được tạo khi dữ liệu hợp lệ.
+Luồng sự kiện chính (Basic flow),Luồng sự kiện chính (Basic flow)
+Actor,Hệ thống
+1. Mở biểu mẫu đăng ký.,"2. Hiển thị tài khoản, họ tên, email và mật khẩu."
+3. Nhập thông tin và xác nhận.,"4. Kiểm tra dữ liệu, tạo danh tính và thông tin người dân."
+Luồng sự kiện thay thế (Alternate flow),Luồng sự kiện thay thế (Alternate flow)
+3.1. Tên đã dùng hoặc thông tin không hợp lệ.,3.2. Thông báo lỗi và yêu cầu sửa; chưa tạo tài khoản.

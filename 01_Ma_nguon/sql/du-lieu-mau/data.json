@@ -1,0 +1,752 @@
+{
+  "BoPhan": [
+    {
+      "BoPhanId": "bp-chuyen-mon",
+      "MaBoPhan": "CM",
+      "TenBoPhan": "Bộ phận chuyên môn",
+      "HoatDong": true
+    },
+    {
+      "BoPhanId": "bp-tiep-nhan",
+      "MaBoPhan": "TN",
+      "TenBoPhan": "Tiếp nhận và trả kết quả",
+      "HoatDong": true
+    }
+  ],
+  "NguoiDung": [
+    {
+      "NguoiDungId": "giaiquyet",
+      "Issuer": "congmotcua-local-identity",
+      "Subject": "44444444-4444-4444-8444-444444444444",
+      "HoTen": "Phạm Đức Huy",
+      "SoDienThoai": null,
+      "Email": "giaiquyet@example.test",
+      "BoPhanId": "bp-chuyen-mon",
+      "HoatDong": true,
+      "VaiTro": "GIAI_QUYET"
+    },
+    {
+      "NguoiDungId": "hoangnam",
+      "Issuer": "congmotcua-local-identity",
+      "Subject": "22222222-2222-4222-8222-222222222222",
+      "HoTen": "Trần Hoàng Nam",
+      "SoDienThoai": null,
+      "Email": "hoangnam@example.test",
+      "BoPhanId": null,
+      "HoatDong": true,
+      "VaiTro": "NGUOI_NOP"
+    },
+    {
+      "NguoiDungId": "minhanh",
+      "Issuer": "congmotcua-local-identity",
+      "Subject": "11111111-1111-4111-8111-111111111111",
+      "HoTen": "Nguyễn Minh Anh",
+      "SoDienThoai": null,
+      "Email": "minhanh@example.test",
+      "BoPhanId": null,
+      "HoatDong": true,
+      "VaiTro": "NGUOI_NOP"
+    },
+    {
+      "NguoiDungId": "ngoclinh",
+      "Issuer": "congmotcua-local-identity",
+      "Subject": "55555555-5555-4555-8555-555555555555",
+      "HoTen": "Võ Ngọc Linh",
+      "SoDienThoai": null,
+      "Email": "ngoclinh@example.test",
+      "BoPhanId": "bp-chuyen-mon",
+      "HoatDong": true,
+      "VaiTro": "GIAI_QUYET"
+    },
+    {
+      "NguoiDungId": "tiepnhan",
+      "Issuer": "congmotcua-local-identity",
+      "Subject": "33333333-3333-4333-8333-333333333333",
+      "HoTen": "Lê Thu Hà",
+      "SoDienThoai": null,
+      "Email": "tiepnhan@example.test",
+      "BoPhanId": "bp-tiep-nhan",
+      "HoatDong": true,
+      "VaiTro": "TIEP_NHAN"
+    }
+  ],
+  "ThuTuc": [
+    {
+      "ThuTucId": "tt-1",
+      "MaThuTuc": "DEMO-01",
+      "TenThuTuc": "Cấp bản sao trích lục hộ tịch",
+      "MoTa": "Thủ tục minh họa cho đồ án. Chuẩn bị đơn đề nghị và giấy tờ chứng minh, nộp trực tuyến và theo dõi ngày hẹn trả sau tiếp nhận.",
+      "SoNgaySLA": 3,
+      "DonViSLA": "NGAY_LAM_VIEC",
+      "SoGioPhanHoi": 8,
+      "QuyTacBoSung": "TINH_LAI",
+      "BoPhanChuyenMonId": "bp-chuyen-mon",
+      "HoatDong": true
+    },
+    {
+      "ThuTucId": "tt-2",
+      "MaThuTuc": "DEMO-02",
+      "TenThuTuc": "Chứng thực bản sao từ bản chính",
+      "MoTa": "Thủ tục minh họa cho đồ án. Chuẩn bị đơn đề nghị và giấy tờ chứng minh, nộp trực tuyến và theo dõi ngày hẹn trả sau tiếp nhận.",
+      "SoNgaySLA": 4,
+      "DonViSLA": "NGAY_LAM_VIEC",
+      "SoGioPhanHoi": 8,
+      "QuyTacBoSung": "TINH_LAI",
+      "BoPhanChuyenMonId": "bp-chuyen-mon",
+      "HoatDong": true
+    },
+    {
+      "ThuTucId": "tt-3",
+      "MaThuTuc": "DEMO-03",
+      "TenThuTuc": "Xác nhận thông tin theo đề nghị",
+      "MoTa": "Thủ tục minh họa cho đồ án. Chuẩn bị đơn đề nghị và giấy tờ chứng minh, nộp trực tuyến và theo dõi ngày hẹn trả sau tiếp nhận.",
+      "SoNgaySLA": 5,
+      "DonViSLA": "NGAY_LAM_VIEC",
+      "SoGioPhanHoi": 8,
+      "QuyTacBoSung": "TINH_LAI",
+      "BoPhanChuyenMonId": "bp-chuyen-mon",
+      "HoatDong": true
+    }
+  ],
+  "ThanhPhanYeuCau": [
+    {
+      "ThanhPhanId": "tp-1-1",
+      "ThuTucId": "tt-1",
+      "TenThanhPhan": "Đơn đề nghị",
+      "BatBuoc": true,
+      "HuongDan": "Bản PDF, ảnh chụp rõ hoặc tệp TXT mẫu để trình diễn.",
+      "ThuTu": 1
+    },
+    {
+      "ThanhPhanId": "tp-1-2",
+      "ThuTucId": "tt-1",
+      "TenThanhPhan": "Giấy tờ chứng minh liên quan",
+      "BatBuoc": true,
+      "HuongDan": "Đính kèm đầy đủ giấy tờ theo nội dung đề nghị.",
+      "ThuTu": 2
+    },
+    {
+      "ThanhPhanId": "tp-2-1",
+      "ThuTucId": "tt-2",
+      "TenThanhPhan": "Đơn đề nghị",
+      "BatBuoc": true,
+      "HuongDan": "Bản PDF, ảnh chụp rõ hoặc tệp TXT mẫu để trình diễn.",
+      "ThuTu": 1
+    },
+    {
+      "ThanhPhanId": "tp-2-2",
+      "ThuTucId": "tt-2",
+      "TenThanhPhan": "Giấy tờ chứng minh liên quan",
+      "BatBuoc": true,
+      "HuongDan": "Đính kèm đầy đủ giấy tờ theo nội dung đề nghị.",
+      "ThuTu": 2
+    },
+    {
+      "ThanhPhanId": "tp-3-1",
+      "ThuTucId": "tt-3",
+      "TenThanhPhan": "Đơn đề nghị",
+      "BatBuoc": true,
+      "HuongDan": "Bản PDF, ảnh chụp rõ hoặc tệp TXT mẫu để trình diễn.",
+      "ThuTu": 1
+    },
+    {
+      "ThanhPhanId": "tp-3-2",
+      "ThuTucId": "tt-3",
+      "TenThanhPhan": "Giấy tờ chứng minh liên quan",
+      "BatBuoc": true,
+      "HuongDan": "Đính kèm đầy đủ giấy tờ theo nội dung đề nghị.",
+      "ThuTu": 2
+    }
+  ],
+  "HoSo": [
+    {
+      "HoSoId": "demo-hs-1",
+      "MaGui": null,
+      "MaHoSo": null,
+      "ChuHoSoId": "minhanh",
+      "ThuTucId": "tt-1",
+      "ThongTinNguoiNop": null,
+      "NoiDungDeNghi": "Hồ sơ minh họa 1: Cấp bản sao trích lục hộ tịch",
+      "TrangThai": "BAN_NHAP",
+      "NgayNop": null,
+      "NgayTiepNhan": null,
+      "MocTinhSLA": null,
+      "SoNgaySLA": null,
+      "DonViSLA": null,
+      "QuyTacBoSung": null,
+      "LichApDung": null,
+      "HanTraGoc": null,
+      "HanTra": null,
+      "NgayKetThuc": null,
+      "RowVersion": 1
+    },
+    {
+      "HoSoId": "demo-hs-2",
+      "MaGui": "GUI-DEMO-002",
+      "MaHoSo": null,
+      "ChuHoSoId": "minhanh",
+      "ThuTucId": "tt-2",
+      "ThongTinNguoiNop": null,
+      "NoiDungDeNghi": "Hồ sơ minh họa 2: Chứng thực bản sao từ bản chính",
+      "TrangThai": "DA_GUI",
+      "NgayNop": "2026-10-28T06:51:15.4916488",
+      "NgayTiepNhan": null,
+      "MocTinhSLA": null,
+      "SoNgaySLA": null,
+      "DonViSLA": null,
+      "QuyTacBoSung": null,
+      "LichApDung": null,
+      "HanTraGoc": null,
+      "HanTra": null,
+      "NgayKetThuc": null,
+      "RowVersion": 1
+    },
+    {
+      "HoSoId": "demo-hs-3",
+      "MaGui": "GUI-DEMO-003",
+      "MaHoSo": "HS-DEMO-003",
+      "ChuHoSoId": "minhanh",
+      "ThuTucId": "tt-3",
+      "ThongTinNguoiNop": null,
+      "NoiDungDeNghi": "Hồ sơ minh họa 3: Xác nhận thông tin theo đề nghị",
+      "TrangThai": "DA_TIEP_NHAN",
+      "NgayNop": "2026-10-27T06:51:15.5420370",
+      "NgayTiepNhan": "2026-10-27T08:51:15.5420370",
+      "MocTinhSLA": "2026-10-27T08:51:15.5420370",
+      "SoNgaySLA": 5,
+      "DonViSLA": "NGAY_LAM_VIEC",
+      "QuyTacBoSung": "TINH_LAI",
+      "LichApDung": "{\"Holidays\":[],\"TimeZone\":\"Asia/Ho_Chi_Minh\"}",
+      "HanTraGoc": "2026-11-03T08:51:15.5420370",
+      "HanTra": "2026-11-03T08:51:15.5420370",
+      "NgayKetThuc": null,
+      "RowVersion": 1
+    },
+    {
+      "HoSoId": "demo-hs-4",
+      "MaGui": "GUI-DEMO-004",
+      "MaHoSo": "HS-DEMO-004",
+      "ChuHoSoId": "minhanh",
+      "ThuTucId": "tt-1",
+      "ThongTinNguoiNop": null,
+      "NoiDungDeNghi": "Hồ sơ minh họa 4: Cấp bản sao trích lục hộ tịch",
+      "TrangThai": "DANG_GIAI_QUYET",
+      "NgayNop": "2026-10-26T06:51:15.5892185",
+      "NgayTiepNhan": "2026-10-26T08:51:15.5892185",
+      "MocTinhSLA": "2026-10-26T08:51:15.5892185",
+      "SoNgaySLA": 3,
+      "DonViSLA": "NGAY_LAM_VIEC",
+      "QuyTacBoSung": "TINH_LAI",
+      "LichApDung": "{\"Holidays\":[],\"TimeZone\":\"Asia/Ho_Chi_Minh\"}",
+      "HanTraGoc": "2026-10-29T08:51:15.5892185",
+      "HanTra": "2026-10-29T08:51:15.5892185",
+      "NgayKetThuc": null,
+      "RowVersion": 1
+    },
+    {
+      "HoSoId": "demo-hs-5",
+      "MaGui": "GUI-DEMO-005",
+      "MaHoSo": "HS-DEMO-005",
+      "ChuHoSoId": "minhanh",
+      "ThuTucId": "tt-2",
+      "ThongTinNguoiNop": null,
+      "NoiDungDeNghi": "Hồ sơ minh họa 5: Chứng thực bản sao từ bản chính",
+      "TrangThai": "DA_CO_KET_QUA",
+      "NgayNop": "2026-10-25T06:51:15.6723535",
+      "NgayTiepNhan": "2026-10-25T08:51:15.6723535",
+      "MocTinhSLA": "2026-10-25T08:51:15.6723535",
+      "SoNgaySLA": 4,
+      "DonViSLA": "NGAY_LAM_VIEC",
+      "QuyTacBoSung": "TINH_LAI",
+      "LichApDung": "{\"Holidays\":[],\"TimeZone\":\"Asia/Ho_Chi_Minh\"}",
+      "HanTraGoc": "2026-10-29T08:51:15.6723535",
+      "HanTra": "2026-10-29T08:51:15.6723535",
+      "NgayKetThuc": null,
+      "RowVersion": 1
+    },
+    {
+      "HoSoId": "demo-hs-6",
+      "MaGui": "GUI-DEMO-006",
+      "MaHoSo": "HS-DEMO-006",
+      "ChuHoSoId": "hoangnam",
+      "ThuTucId": "tt-3",
+      "ThongTinNguoiNop": null,
+      "NoiDungDeNghi": "Hồ sơ minh họa 6: Xác nhận thông tin theo đề nghị",
+      "TrangThai": "DA_TRA_KET_QUA",
+      "NgayNop": "2026-10-24T06:51:15.7488789",
+      "NgayTiepNhan": "2026-10-24T08:51:15.7488789",
+      "MocTinhSLA": "2026-10-24T08:51:15.7488789",
+      "SoNgaySLA": 5,
+      "DonViSLA": "NGAY_LAM_VIEC",
+      "QuyTacBoSung": "TINH_LAI",
+      "LichApDung": "{\"Holidays\":[],\"TimeZone\":\"Asia/Ho_Chi_Minh\"}",
+      "HanTraGoc": "2026-10-30T08:51:15.7488789",
+      "HanTra": "2026-10-30T08:51:15.7488789",
+      "NgayKetThuc": "2026-10-24T11:51:15.7488789",
+      "RowVersion": 1
+    }
+  ],
+  "PhanCongXuLy": [
+    {
+      "PhanCongId": "6339625985c348d7856d2ca14c7b0ada",
+      "HoSoId": "demo-hs-4",
+      "NguoiChuyenId": "tiepnhan",
+      "CanBoNhanId": "giaiquyet",
+      "BoPhanNhanId": "bp-chuyen-mon",
+      "BatDauLuc": "2026-10-26T09:51:15.5892185",
+      "KetThucLuc": null,
+      "NoiDungChuyen": "Phân công mẫu."
+    },
+    {
+      "PhanCongId": "7f6138fea7f047279c8d079df07392ea",
+      "HoSoId": "demo-hs-5",
+      "NguoiChuyenId": "tiepnhan",
+      "CanBoNhanId": "giaiquyet",
+      "BoPhanNhanId": "bp-chuyen-mon",
+      "BatDauLuc": "2026-10-25T09:51:15.6723535",
+      "KetThucLuc": "2026-10-25T10:51:15.6723535",
+      "NoiDungChuyen": "Phân công mẫu."
+    },
+    {
+      "PhanCongId": "9cabe9c3258d478fb4095694ebb39851",
+      "HoSoId": "demo-hs-6",
+      "NguoiChuyenId": "tiepnhan",
+      "CanBoNhanId": "giaiquyet",
+      "BoPhanNhanId": "bp-chuyen-mon",
+      "BatDauLuc": "2026-10-24T09:51:15.7488789",
+      "KetThucLuc": "2026-10-24T10:51:15.7488789",
+      "NoiDungChuyen": "Phân công mẫu."
+    }
+  ],
+  "YeuCauBoSung": [],
+  "NoiDungBoSung": [],
+  "LanBoSung": [],
+  "TaiLieuHoSo": [
+    {
+      "TaiLieuId": "16453400900a4358ac8259b3fbfd2e2a",
+      "HoSoId": "demo-hs-5",
+      "ThanhPhanId": "tp-2-2",
+      "LanId": null,
+      "SoPhienBan": 1,
+      "TenTep": "Giấy tờ chứng minh liên quan.txt",
+      "LoaiTep": "text/plain",
+      "DungLuong": 163,
+      "TepKey": "f40643c227bc48a0a6d8b6bd68dc49a3",
+      "HienHanh": true,
+      "TaoLuc": "2026-10-25T06:51:15.6723535"
+    },
+    {
+      "TaiLieuId": "21e0a82ab4544f34be0129c56b8e34ee",
+      "HoSoId": "demo-hs-4",
+      "ThanhPhanId": "tp-1-1",
+      "LanId": null,
+      "SoPhienBan": 1,
+      "TenTep": "Đơn đề nghị.txt",
+      "LoaiTep": "text/plain",
+      "DungLuong": 144,
+      "TepKey": "0d1a7bc74318489ebfda828b4c8df8ff",
+      "HienHanh": true,
+      "TaoLuc": "2026-10-26T06:51:15.5892185"
+    },
+    {
+      "TaiLieuId": "2caae7f8c4ec4ffea68c6d9a4de2ff5c",
+      "HoSoId": "demo-hs-2",
+      "ThanhPhanId": "tp-2-1",
+      "LanId": null,
+      "SoPhienBan": 1,
+      "TenTep": "Đơn đề nghị.txt",
+      "LoaiTep": "text/plain",
+      "DungLuong": 146,
+      "TepKey": "796a398dcd254cfeb4cc13f71336b506",
+      "HienHanh": true,
+      "TaoLuc": "2026-10-28T06:51:15.4916488"
+    },
+    {
+      "TaiLieuId": "528825604b184e2fa281b43ffddebd01",
+      "HoSoId": "demo-hs-3",
+      "ThanhPhanId": "tp-3-1",
+      "LanId": null,
+      "SoPhienBan": 1,
+      "TenTep": "Đơn đề nghị.txt",
+      "LoaiTep": "text/plain",
+      "DungLuong": 144,
+      "TepKey": "c3c69e79f8ce4b698b90d25ea88e253b",
+      "HienHanh": true,
+      "TaoLuc": "2026-10-27T06:51:15.5420370"
+    },
+    {
+      "TaiLieuId": "7cfb29db3c4d4211b27b1565f01c76e9",
+      "HoSoId": "demo-hs-1",
+      "ThanhPhanId": "tp-1-1",
+      "LanId": null,
+      "SoPhienBan": 1,
+      "TenTep": "Đơn đề nghị.txt",
+      "LoaiTep": "text/plain",
+      "DungLuong": 144,
+      "TepKey": "11bb48ac5d784411839af683ae871cf7",
+      "HienHanh": true,
+      "TaoLuc": "2026-10-29T06:51:15.2864774"
+    },
+    {
+      "TaiLieuId": "86fbd1a249c3450b95e1dfe0891340ee",
+      "HoSoId": "demo-hs-1",
+      "ThanhPhanId": "tp-1-2",
+      "LanId": null,
+      "SoPhienBan": 1,
+      "TenTep": "Giấy tờ chứng minh liên quan.txt",
+      "LoaiTep": "text/plain",
+      "DungLuong": 161,
+      "TepKey": "27a8149d43d640b79969678845e7d7d1",
+      "HienHanh": true,
+      "TaoLuc": "2026-10-29T06:51:15.2864774"
+    },
+    {
+      "TaiLieuId": "a075bbc479394254956fffba09ac7a3c",
+      "HoSoId": "demo-hs-5",
+      "ThanhPhanId": "tp-2-1",
+      "LanId": null,
+      "SoPhienBan": 1,
+      "TenTep": "Đơn đề nghị.txt",
+      "LoaiTep": "text/plain",
+      "DungLuong": 146,
+      "TepKey": "5b59e4ec9c8a4e5098a1049b0dcafcda",
+      "HienHanh": true,
+      "TaoLuc": "2026-10-25T06:51:15.6723535"
+    },
+    {
+      "TaiLieuId": "a593876aa0734adea2a6b349176aeef3",
+      "HoSoId": "demo-hs-2",
+      "ThanhPhanId": "tp-2-2",
+      "LanId": null,
+      "SoPhienBan": 1,
+      "TenTep": "Giấy tờ chứng minh liên quan.txt",
+      "LoaiTep": "text/plain",
+      "DungLuong": 163,
+      "TepKey": "cc6dcec22f71475dbed628c5379ddf68",
+      "HienHanh": true,
+      "TaoLuc": "2026-10-28T06:51:15.4916488"
+    },
+    {
+      "TaiLieuId": "afbe5d93a91c47eaabd80ecd41c83bde",
+      "HoSoId": "demo-hs-3",
+      "ThanhPhanId": "tp-3-2",
+      "LanId": null,
+      "SoPhienBan": 1,
+      "TenTep": "Giấy tờ chứng minh liên quan.txt",
+      "LoaiTep": "text/plain",
+      "DungLuong": 161,
+      "TepKey": "b09e8086c27d467380c7cae8f0103948",
+      "HienHanh": true,
+      "TaoLuc": "2026-10-27T06:51:15.5420370"
+    },
+    {
+      "TaiLieuId": "c35a53300e2943dfac8943f452101d7d",
+      "HoSoId": "demo-hs-6",
+      "ThanhPhanId": "tp-3-1",
+      "LanId": null,
+      "SoPhienBan": 1,
+      "TenTep": "Đơn đề nghị.txt",
+      "LoaiTep": "text/plain",
+      "DungLuong": 144,
+      "TepKey": "401aa921460a46c5bf1468e73238cdc8",
+      "HienHanh": true,
+      "TaoLuc": "2026-10-24T06:51:15.7488789"
+    },
+    {
+      "TaiLieuId": "c58e6cb360c1482f96f1f564ff67c8c9",
+      "HoSoId": "demo-hs-4",
+      "ThanhPhanId": "tp-1-2",
+      "LanId": null,
+      "SoPhienBan": 1,
+      "TenTep": "Giấy tờ chứng minh liên quan.txt",
+      "LoaiTep": "text/plain",
+      "DungLuong": 161,
+      "TepKey": "59796af9e89340da988a6020b14fd26f",
+      "HienHanh": true,
+      "TaoLuc": "2026-10-26T06:51:15.5892185"
+    },
+    {
+      "TaiLieuId": "d0ba0b8843db4175b9780ab428cfde07",
+      "HoSoId": "demo-hs-6",
+      "ThanhPhanId": "tp-3-2",
+      "LanId": null,
+      "SoPhienBan": 1,
+      "TenTep": "Giấy tờ chứng minh liên quan.txt",
+      "LoaiTep": "text/plain",
+      "DungLuong": 161,
+      "TepKey": "da1db176bbb54ca1b274013cc483e0b8",
+      "HienHanh": true,
+      "TaoLuc": "2026-10-24T06:51:15.7488789"
+    }
+  ],
+  "KiemTraThanhPhan": [
+    {
+      "KiemTraId": "2871ec14c9a24d06b8a64a07815f8b7b",
+      "TaiLieuId": "21e0a82ab4544f34be0129c56b8e34ee",
+      "CanBoId": "tiepnhan",
+      "KetQua": "DAT",
+      "NhanXet": null,
+      "ThoiDiem": "2026-10-26T07:51:15.5892185"
+    },
+    {
+      "KiemTraId": "66f5b6be303f420981d715e30b64ea58",
+      "TaiLieuId": "c35a53300e2943dfac8943f452101d7d",
+      "CanBoId": "tiepnhan",
+      "KetQua": "DAT",
+      "NhanXet": null,
+      "ThoiDiem": "2026-10-24T07:51:15.7488789"
+    },
+    {
+      "KiemTraId": "76c6e285a6b7446ebfa6f97d12fbd190",
+      "TaiLieuId": "528825604b184e2fa281b43ffddebd01",
+      "CanBoId": "tiepnhan",
+      "KetQua": "DAT",
+      "NhanXet": null,
+      "ThoiDiem": "2026-10-27T07:51:15.5420370"
+    },
+    {
+      "KiemTraId": "c8123d1ef1f446e3a22be17a877f0bfc",
+      "TaiLieuId": "d0ba0b8843db4175b9780ab428cfde07",
+      "CanBoId": "tiepnhan",
+      "KetQua": "DAT",
+      "NhanXet": null,
+      "ThoiDiem": "2026-10-24T07:51:15.7488789"
+    },
+    {
+      "KiemTraId": "cca2fc8a8810421599720b57fd4d02df",
+      "TaiLieuId": "16453400900a4358ac8259b3fbfd2e2a",
+      "CanBoId": "tiepnhan",
+      "KetQua": "DAT",
+      "NhanXet": null,
+      "ThoiDiem": "2026-10-25T07:51:15.6723535"
+    },
+    {
+      "KiemTraId": "edbe76ad54b24c8f99ce2d1a0039d310",
+      "TaiLieuId": "afbe5d93a91c47eaabd80ecd41c83bde",
+      "CanBoId": "tiepnhan",
+      "KetQua": "DAT",
+      "NhanXet": null,
+      "ThoiDiem": "2026-10-27T07:51:15.5420370"
+    },
+    {
+      "KiemTraId": "f9e736d704464003a18c4289e5913e4f",
+      "TaiLieuId": "a075bbc479394254956fffba09ac7a3c",
+      "CanBoId": "tiepnhan",
+      "KetQua": "DAT",
+      "NhanXet": null,
+      "ThoiDiem": "2026-10-25T07:51:15.6723535"
+    },
+    {
+      "KiemTraId": "fa9402dda9d740fc8eca7bf32a3ab962",
+      "TaiLieuId": "c58e6cb360c1482f96f1f564ff67c8c9",
+      "CanBoId": "tiepnhan",
+      "KetQua": "DAT",
+      "NhanXet": null,
+      "ThoiDiem": "2026-10-26T07:51:15.5892185"
+    }
+  ],
+  "KetQuaHoSo": [
+    {
+      "KetQuaId": "34bec1d131c44b7bb5e4f4933b64fd69",
+      "HoSoId": "demo-hs-5",
+      "LoaiKetQua": "THANH_CONG",
+      "NoiDungKetLuan": "Đồng ý giải quyết nội dung đề nghị theo hồ sơ mẫu.",
+      "LyDoTuChoi": null,
+      "TepKey": "e1fbcabfb0d8466484033d2fce344146",
+      "NguoiTaoId": "giaiquyet",
+      "TaoLuc": "2026-10-25T10:51:15.6723535",
+      "NguoiPhatHanhId": null,
+      "PhatHanhLuc": null
+    },
+    {
+      "KetQuaId": "bac18abec6154bde9df84be5bd352de8",
+      "HoSoId": "demo-hs-6",
+      "LoaiKetQua": "THANH_CONG",
+      "NoiDungKetLuan": "Đồng ý giải quyết nội dung đề nghị theo hồ sơ mẫu.",
+      "LyDoTuChoi": null,
+      "TepKey": "1b9716b2b588442c9d973af73dcd66b0",
+      "NguoiTaoId": "giaiquyet",
+      "TaoLuc": "2026-10-24T10:51:15.7488789",
+      "NguoiPhatHanhId": "tiepnhan",
+      "PhatHanhLuc": "2026-10-24T11:51:15.7488789"
+    }
+  ],
+  "LichSuXuLy": [
+    {
+      "SuKienId": "22cc039a8f1948348b0bad1f41294ca7",
+      "HoSoId": "demo-hs-4",
+      "NguoiThucHienId": "tiepnhan",
+      "HanhDong": "TIEP_NHAN",
+      "TrangThaiTruoc": "DA_GUI",
+      "TrangThaiSau": "DA_TIEP_NHAN",
+      "NoiDung": "Tiếp nhận và cấp ngày hẹn trả.",
+      "CongKhai": true,
+      "ThoiDiem": "2026-10-26T08:51:15.5892185"
+    },
+    {
+      "SuKienId": "25d64b53d8874122b1dab26aa7b4b606",
+      "HoSoId": "demo-hs-5",
+      "NguoiThucHienId": "giaiquyet",
+      "HanhDong": "KET_QUA",
+      "TrangThaiTruoc": "DANG_GIAI_QUYET",
+      "TrangThaiSau": "DA_CO_KET_QUA",
+      "NoiDung": "Lập kết quả, chờ phát hành.",
+      "CongKhai": true,
+      "ThoiDiem": "2026-10-25T10:51:15.6723535"
+    },
+    {
+      "SuKienId": "2c3a993f00c142629c17513db2884237",
+      "HoSoId": "demo-hs-6",
+      "NguoiThucHienId": "giaiquyet",
+      "HanhDong": "KET_QUA",
+      "TrangThaiTruoc": "DANG_GIAI_QUYET",
+      "TrangThaiSau": "DA_CO_KET_QUA",
+      "NoiDung": "Lập kết quả, chờ phát hành.",
+      "CongKhai": true,
+      "ThoiDiem": "2026-10-24T10:51:15.7488789"
+    },
+    {
+      "SuKienId": "2d7c5c9082d84dec82aa3df5488e05fd",
+      "HoSoId": "demo-hs-4",
+      "NguoiThucHienId": "tiepnhan",
+      "HanhDong": "PHAN_CONG",
+      "TrangThaiTruoc": "DA_TIEP_NHAN",
+      "TrangThaiSau": "DANG_GIAI_QUYET",
+      "NoiDung": "Giao cán bộ chuyên môn.",
+      "CongKhai": true,
+      "ThoiDiem": "2026-10-26T09:51:15.5892185"
+    },
+    {
+      "SuKienId": "35281748b8fb4237bb8646852803a02b",
+      "HoSoId": "demo-hs-6",
+      "NguoiThucHienId": "hoangnam",
+      "HanhDong": "NOP_HO_SO",
+      "TrangThaiTruoc": "BAN_NHAP",
+      "TrangThaiSau": "DA_GUI",
+      "NoiDung": "Dữ liệu mẫu phục vụ trình diễn đồ án.",
+      "CongKhai": true,
+      "ThoiDiem": "2026-10-24T06:51:15.7488789"
+    },
+    {
+      "SuKienId": "47ecd3d815ba45e4819615b3c9e15ee8",
+      "HoSoId": "demo-hs-3",
+      "NguoiThucHienId": "tiepnhan",
+      "HanhDong": "TIEP_NHAN",
+      "TrangThaiTruoc": "DA_GUI",
+      "TrangThaiSau": "DA_TIEP_NHAN",
+      "NoiDung": "Tiếp nhận và cấp ngày hẹn trả.",
+      "CongKhai": true,
+      "ThoiDiem": "2026-10-27T08:51:15.5420370"
+    },
+    {
+      "SuKienId": "5001f1f23c6b425aaca48c6872ec30b2",
+      "HoSoId": "demo-hs-6",
+      "NguoiThucHienId": "tiepnhan",
+      "HanhDong": "PHAN_CONG",
+      "TrangThaiTruoc": "DA_TIEP_NHAN",
+      "TrangThaiSau": "DANG_GIAI_QUYET",
+      "NoiDung": "Giao cán bộ chuyên môn.",
+      "CongKhai": true,
+      "ThoiDiem": "2026-10-24T09:51:15.7488789"
+    },
+    {
+      "SuKienId": "7c1e6f836e4c4330953538daa480b424",
+      "HoSoId": "demo-hs-5",
+      "NguoiThucHienId": "minhanh",
+      "HanhDong": "NOP_HO_SO",
+      "TrangThaiTruoc": "BAN_NHAP",
+      "TrangThaiSau": "DA_GUI",
+      "NoiDung": "Dữ liệu mẫu phục vụ trình diễn đồ án.",
+      "CongKhai": true,
+      "ThoiDiem": "2026-10-25T06:51:15.6723535"
+    },
+    {
+      "SuKienId": "8454a5d72d5a45db8cd2bc05b977bf37",
+      "HoSoId": "demo-hs-6",
+      "NguoiThucHienId": "tiepnhan",
+      "HanhDong": "TRA_KET_QUA",
+      "TrangThaiTruoc": "DA_CO_KET_QUA",
+      "TrangThaiSau": "DA_TRA_KET_QUA",
+      "NoiDung": "Phát hành kết quả mẫu.",
+      "CongKhai": true,
+      "ThoiDiem": "2026-10-24T11:51:15.7488789"
+    },
+    {
+      "SuKienId": "9f71c279be364bf5957856fa3fef1559",
+      "HoSoId": "demo-hs-3",
+      "NguoiThucHienId": "minhanh",
+      "HanhDong": "NOP_HO_SO",
+      "TrangThaiTruoc": "BAN_NHAP",
+      "TrangThaiSau": "DA_GUI",
+      "NoiDung": "Dữ liệu mẫu phục vụ trình diễn đồ án.",
+      "CongKhai": true,
+      "ThoiDiem": "2026-10-27T06:51:15.5420370"
+    },
+    {
+      "SuKienId": "b6b5e8aac1cc4636bcb92db93a9b3712",
+      "HoSoId": "demo-hs-5",
+      "NguoiThucHienId": "tiepnhan",
+      "HanhDong": "PHAN_CONG",
+      "TrangThaiTruoc": "DA_TIEP_NHAN",
+      "TrangThaiSau": "DANG_GIAI_QUYET",
+      "NoiDung": "Giao cán bộ chuyên môn.",
+      "CongKhai": true,
+      "ThoiDiem": "2026-10-25T09:51:15.6723535"
+    },
+    {
+      "SuKienId": "bc52752e7102497fbdd04e1d6d93a3ab",
+      "HoSoId": "demo-hs-4",
+      "NguoiThucHienId": "minhanh",
+      "HanhDong": "NOP_HO_SO",
+      "TrangThaiTruoc": "BAN_NHAP",
+      "TrangThaiSau": "DA_GUI",
+      "NoiDung": "Dữ liệu mẫu phục vụ trình diễn đồ án.",
+      "CongKhai": true,
+      "ThoiDiem": "2026-10-26T06:51:15.5892185"
+    },
+    {
+      "SuKienId": "c528a653c80f4ff292ed7688ccee2fac",
+      "HoSoId": "demo-hs-1",
+      "NguoiThucHienId": "minhanh",
+      "HanhDong": "LUU_NHAP",
+      "TrangThaiTruoc": "BAN_NHAP",
+      "TrangThaiSau": "BAN_NHAP",
+      "NoiDung": "Dữ liệu mẫu phục vụ trình diễn đồ án.",
+      "CongKhai": true,
+      "ThoiDiem": "2026-10-29T06:51:15.2864774"
+    },
+    {
+      "SuKienId": "d50eae56403e498bb34ebdda5d1d3483",
+      "HoSoId": "demo-hs-2",
+      "NguoiThucHienId": "minhanh",
+      "HanhDong": "NOP_HO_SO",
+      "TrangThaiTruoc": "BAN_NHAP",
+      "TrangThaiSau": "DA_GUI",
+      "NoiDung": "Dữ liệu mẫu phục vụ trình diễn đồ án.",
+      "CongKhai": true,
+      "ThoiDiem": "2026-10-28T06:51:15.4916488"
+    },
+    {
+      "SuKienId": "d5f0738aa8a94754b56654c872ea1c76",
+      "HoSoId": "demo-hs-6",
+      "NguoiThucHienId": "tiepnhan",
+      "HanhDong": "TIEP_NHAN",
+      "TrangThaiTruoc": "DA_GUI",
+      "TrangThaiSau": "DA_TIEP_NHAN",
+      "NoiDung": "Tiếp nhận và cấp ngày hẹn trả.",
+      "CongKhai": true,
+      "ThoiDiem": "2026-10-24T08:51:15.7488789"
+    },
+    {
+      "SuKienId": "e919cddb075c40f4b764e55549bf46a6",
+      "HoSoId": "demo-hs-5",
+      "NguoiThucHienId": "tiepnhan",
+      "HanhDong": "TIEP_NHAN",
+      "TrangThaiTruoc": "DA_GUI",
+      "TrangThaiSau": "DA_TIEP_NHAN",
+      "NoiDung": "Tiếp nhận và cấp ngày hẹn trả.",
+      "CongKhai": true,
+      "ThoiDiem": "2026-10-25T08:51:15.6723535"
+    }
+  ]
+}

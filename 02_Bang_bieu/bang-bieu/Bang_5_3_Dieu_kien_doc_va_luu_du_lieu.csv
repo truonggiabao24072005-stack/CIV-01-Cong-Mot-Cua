@@ -1,0 +1,5 @@
+﻿Lớp hoặc tệp,Điều kiện áp dụng
+FileStore,"Giới hạn 10 MB, PDF/PNG/JPG/JPEG/TXT, kiểm định dạng và sinh khóa lưu."
+WorkflowService.Visible,Người dân xem hồ sơ của mình. Cán bộ tiếp nhận xem hồ sơ đã gửi. Chuyên môn xem theo phân công và quyền đọc kết thúc.
+WorkflowService.Detail,Lọc lịch sử theo cờ công khai đối với người dân. Ẩn kết quả chưa phát hành.
+TraCuuController,"Thử thách công khai dùng một lần, tra cứu chỉ trả các mốc và trạng thái giới hạn."

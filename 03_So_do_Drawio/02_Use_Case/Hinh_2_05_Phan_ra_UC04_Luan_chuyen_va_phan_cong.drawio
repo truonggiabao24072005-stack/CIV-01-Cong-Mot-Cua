@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mxfile host="app.diagrams.net" compressed="false"><diagram id="UC04" name="UC04 Luân chuyển và phân công">
+    <mxGraphModel dx="1640" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1640" pageHeight="920" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="PHÂN RÃ LUÂN CHUYỂN VÀ PHÂN CÔNG" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Times New Roman;fontSize=33;fontStyle=1;fontColor=#000000;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="10" y="8" width="1620" height="56" as="geometry"/>
+        </mxCell>
+        <mxCell id="assign" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;Phân công / chuyển cán&lt;br&gt;bộ&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;spacing=10;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=35;" vertex="1" parent="1">
+          <mxGeometry x="50" y="345" width="470" height="135" as="geometry"/>
+        </mxCell>
+        <mxCell id="officer" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;Chọn cán bộ nhận đúng bộ&lt;br&gt;phận&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;spacing=10;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=35;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="95" width="520" height="125" as="geometry"/>
+        </mxCell>
+        <mxCell id="save" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;Ghi thông tin phân công&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;spacing=10;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=35;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="645" width="520" height="125" as="geometry"/>
+        </mxCell>
+        <mxCell id="close" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;Kết thúc phân công hiện&lt;br&gt;hành&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;spacing=10;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=35;" vertex="1" parent="1">
+          <mxGeometry x="70" y="745" width="500" height="125" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge0" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;«include»&lt;/div&gt;" style="html=1;rounded=0;endArrow=open;endSize=16;endFill=0;startArrow=none;dashed=1;dashPattern=7 5;strokeWidth=1.5;strokeColor=#000000;exitX=0.881055;exitY=0.176276;entryX=0.149109;entryY=0.856196;exitPerimeter=0;entryPerimeter=0;labelWidth=119;fontSize=25;fontFamily=Times New Roman;fontColor=#000000;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="assign" target="officer">
+          <mxGeometry relative="1" x="0" y="0" as="geometry">
+            <mxPoint x="0.0" y="0.0" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge1" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;«include»&lt;/div&gt;" style="html=1;rounded=0;endArrow=open;endSize=16;endFill=0;startArrow=none;dashed=1;dashPattern=7 5;strokeWidth=1.5;strokeColor=#000000;exitX=0.856605;exitY=0.850475;entryX=0.175837;entryY=0.119318;exitPerimeter=0;entryPerimeter=0;labelWidth=119;fontSize=25;fontFamily=Times New Roman;fontColor=#000000;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="assign" target="save">
+          <mxGeometry relative="1" x="0" y="0" as="geometry">
+            <mxPoint x="0.0" y="0.0" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge2" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;«extend»&lt;br&gt;[Đã có phân công hiện hành]&lt;/div&gt;" style="html=1;rounded=0;endArrow=open;endSize=16;endFill=0;startArrow=none;dashed=1;dashPattern=7 5;strokeWidth=1.5;strokeColor=#000000;exitX=0.488927;exitY=0.000123;entryX=0.512721;entryY=0.999838;exitPerimeter=0;entryPerimeter=0;labelWidth=311;fontSize=25;fontFamily=Times New Roman;fontColor=#000000;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="close" target="assign">
+          <mxGeometry relative="1" x="0" y="0" as="geometry">
+            <mxPoint x="-2.72" y="2.5" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  </mxfile>

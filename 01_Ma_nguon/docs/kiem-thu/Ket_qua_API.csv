@@ -1,0 +1,118 @@
+﻿Đợt,Bước kiểm tra,Mã HTTP,Kết quả
+Luồng API,Không đăng nhập không xem được hồ sơ,401,Đạt
+Luồng API,JWT sai bị từ chối,401,Đạt
+Luồng API,Thông tin vai trò minhanh,200,Đạt
+Luồng API,Thông tin vai trò hoangnam,200,Đạt
+Luồng API,Thông tin vai trò tiepnhan,200,Đạt
+Luồng API,Thông tin vai trò giaiquyet,200,Đạt
+Luồng API,Thông tin vai trò ngoclinh,200,Đạt
+Luồng API,Danh sách thủ tục công khai,200,Đạt
+Luồng API,Danh sách thành phần công khai,200,Đạt
+Luồng API,Chặn quản trị minhanh,403,Đạt
+Luồng API,Chặn quản trị giaiquyet,403,Đạt
+Luồng API,Tiếp nhận xem danh mục,200,Đạt
+Luồng API,Người dân không xem danh sách cán bộ,403,Đạt
+Luồng API,Không chấp nhận JSON thiếu trường,400,Đạt
+Luồng API,Không chấp nhận danh sách tệp chứa null,400,Đạt
+Luồng API,Upload script.html,400,Đạt
+Luồng API,Upload anh.png,400,Đạt
+Luồng API,Upload rong.txt,400,Đạt
+Luồng API,Upload lon.txt,400,Đạt
+Luồng API,Upload don.txt,200,Đạt
+Luồng API,Không dùng tệp người khác,403,Đạt
+Luồng API,Upload don.txt,200,Đạt
+Luồng API,Không gắn sai thành phần thủ tục,400,Đạt
+Luồng API,Không gắn một tệp cho hai thành phần,400,Đạt
+Luồng API,Lưu nháp chưa đủ giấy tờ,200,Đạt
+Luồng API,Cán bộ không xem nháp,404,Đạt
+Luồng API,Người khác không xem nháp,404,Đạt
+Luồng API,Không nộp khi thiếu thành phần bắt buộc,400,Đạt
+Luồng API,Upload ban1.txt,200,Đạt
+Luồng API,Upload ban2.txt,200,Đạt
+Luồng API,Sửa nháp và nộp đủ hồ sơ,200,Đạt
+Luồng API,Không sửa bản đã nộp,409,Đạt
+Luồng API,Chặn đọc hồ sơ ngoài phạm vi hoangnam,404,Đạt
+Luồng API,Chặn đọc hồ sơ ngoài phạm vi ngoclinh,404,Đạt
+Luồng API,Chặn tải giấy tờ của người khác,404,Đạt
+Luồng API,Chủ hồ sơ tải tài liệu,200,Đạt
+Luồng API,Người dân không tự tiếp nhận,403,Đạt
+Luồng API,Chưa đánh giá tệp thì không tiếp nhận,400,Đạt
+Luồng API,Đánh giá chưa đạt cần lý do,400,Đạt
+Luồng API,kiem-tra-tai-lieu,200,Đạt
+Luồng API,kiem-tra-tai-lieu,200,Đạt
+Luồng API,Chặn cập nhật phiên bản cũ,409,Đạt
+Luồng API,Tiếp nhận cấp mã và ngày hẹn,200,Đạt
+Luồng API,Nhận mới có mã chính thức và SLA,200,Đạt
+Luồng API,Không tiếp nhận lặp,409,Đạt
+Luồng API,Chặn phân công sai bộ phận,400,Đạt
+Luồng API,Chặn phân công người dân,400,Đạt
+Luồng API,luan-chuyen,200,Đạt
+Luồng API,Cán bộ được phân công đọc hồ sơ,200,Đạt
+Luồng API,yeu-cau-bo-sung,200,Đạt
+Luồng API,Không tạo yêu cầu thứ hai khi đang chờ,403,Đạt
+Luồng API,Chặn bổ sung rỗng,400,Đạt
+Luồng API,TC19 Chặn giải trình thay cho tệp yêu cầu,400,Đạt
+Luồng API,Upload bo-sung.txt,200,Đạt
+Luồng API,gui-bo-sung,200,Đạt
+Luồng API,Không gửi lần tiếp khi đang chờ đánh giá,409,Đạt
+Luồng API,Tiếp nhận không đánh giá thay chuyên môn,403,Đạt
+Luồng API,Chưa đánh giá tệp mới không nhận bổ sung,400,Đạt
+Luồng API,kiem-tra-tai-lieu,200,Đạt
+Luồng API,kiem-tra-bo-sung,200,Đạt
+Luồng API,Bổ sung đạt thay phiên bản và quay lại xử lý,200,Đạt
+Luồng API,luan-chuyen,200,Đạt
+Luồng API,Cán bộ cũ mất quyền sau bàn giao,404,Đạt
+Luồng API,Cán bộ cũ không được ghi kết quả,403,Đạt
+Luồng API,Kết quả thành công phải có tệp,400,Đạt
+Luồng API,Upload ket-qua.txt,200,Đạt
+Luồng API,ket-qua,200,Đạt
+Luồng API,Chưa phát hành người dân không thấy kết quả,200,Đạt
+Luồng API,Chặn tải kết quả chưa phát hành,403,Đạt
+Luồng API,Cán bộ cuối xem kết quả sau đóng phân công,200,Đạt
+Luồng API,Chuyên môn không tự phát hành,403,Đạt
+Luồng API,Tiếp nhận phát hành và kết thúc hồ sơ,200,Đạt
+Luồng API,Người dân thấy kết quả đã phát hành,200,Đạt
+Luồng API,Tải đúng tệp kết quả đã phát hành,200,Đạt
+Luồng API,Không phát hành hai lần,409,Đạt
+Luồng API,Không mở lại bổ sung sau kết thúc,403,Đạt
+Luồng API,Upload thanhphan1.txt,200,Đạt
+Luồng API,Upload thanhphan2.txt,200,Đạt
+Luồng API,Tạo và nộp hồ sơ,200,Đạt
+Luồng API,yeu-cau-bo-sung,200,Đạt
+Luồng API,Yêu cầu sửa nội dung phải có nội dung sửa,400,Đạt
+Luồng API,gui-bo-sung,200,Đạt
+Luồng API,kiem-tra-bo-sung,200,Đạt
+Luồng API,Chưa đạt mở lại lượt gửi nhưng giữ lịch sử,200,Đạt
+Luồng API,gui-bo-sung,200,Đạt
+Luồng API,kiem-tra-bo-sung,200,Đạt
+Luồng API,Bổ sung trước tiếp nhận chưa tính SLA,200,Đạt
+Luồng API,kiem-tra-tai-lieu,200,Đạt
+Luồng API,kiem-tra-tai-lieu,200,Đạt
+Luồng API,Hai yêu cầu đồng thời chỉ một lần tiếp nhận,200,Đạt
+Luồng API,Upload thanhphan1.txt,200,Đạt
+Luồng API,Upload thanhphan2.txt,200,Đạt
+Luồng API,Tạo và nộp hồ sơ,200,Đạt
+Luồng API,tu-choi,200,Đạt
+Luồng API,Từ chối trước tiếp nhận không cấp mã chính thức,200,Đạt
+Luồng API,luan-chuyen,200,Đạt
+Luồng API,tu-choi,200,Đạt
+Luồng API,Từ chối giải quyết kết thúc và đóng phân công,200,Đạt
+Luồng API,Chặn báo cáo quản trị minhanh,403,Đạt
+Luồng API,Chặn báo cáo quản trị giaiquyet,403,Đạt
+Luồng API,Thống kê tổng hợp tiếp nhận,200,Đạt
+Luồng API,Chặn tự khóa tài khoản,400,Đạt
+Luồng API,Khóa tài khoản người dùng,200,Đạt
+Luồng API,Token cũ của người bị khóa bị chặn,403,Đạt
+Luồng API,Mở lại tài khoản,200,Đạt
+Luồng API,Lọc danh sách và giới hạn phân trang,200,Đạt
+Luồng API,Tạo thử thách tra cứu,200,Đạt
+Luồng API,Tra cứu công khai đúng dữ liệu giới hạn,200,Đạt
+Luồng API,Không tái sử dụng thử thách,400,Đạt
+Kiểm tra lại,Upload thanhphan1.txt,200,Đạt
+Kiểm tra lại,Upload thanhphan2.txt,200,Đạt
+Kiểm tra lại,Tạo và nộp hồ sơ,200,Đạt
+Kiểm tra lại,yeu-cau-bo-sung,200,Đạt
+Kiểm tra lại,Không được chỉ giải trình khi yêu cầu thay tệp,400,Đạt
+Kiểm tra lại,Tạo nháp để thử mất tệp,200,Đạt
+Kiểm tra lại,Upload don.txt,200,Đạt
+Kiểm tra lại,Không gắn tệp đã mất dữ liệu,404,Đạt

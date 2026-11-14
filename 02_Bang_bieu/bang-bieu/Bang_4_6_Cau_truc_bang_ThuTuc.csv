@@ -1,0 +1,11 @@
+﻿Tên cột,Kiểu dữ liệu,Ràng buộc,Ý nghĩa
+ThuTucId,varchar(50),"PK, NN",Định danh nội bộ.
+MaThuTuc,nvarchar(255),"UQ, NN",Mã thủ tục dùng trong danh mục.
+TenThuTuc,nvarchar(255),NN,Tên thủ tục hiển thị.
+MoTa,nvarchar(max),NN,Mô tả phạm vi và cách chuẩn bị.
+SoNgaySLA,int,NN,Số ngày xử lý.
+DonViSLA,nvarchar(255),NN,Ngày lịch hoặc ngày làm việc.
+SoGioPhanHoi,int,NN,Ngưỡng cấu hình phản hồi ban đầu.
+QuyTacBoSung,nvarchar(255),NN,Quy tắc xử lý hạn sau bổ sung.
+BoPhanChuyenMonId,varchar(50),"FK, NN",→ BoPhan.BoPhanId
+HoatDong,bit,NN,Cho phép đối tượng còn sử dụng.

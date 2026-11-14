@@ -1,0 +1,37 @@
+{
+  "realm": "congmotcua",
+  "enabled": true,
+  "registrationAllowed": false,
+  "roles": {
+    "realm": [
+      {
+        "name": "NGUOI_NOP"
+      },
+      {
+        "name": "TIEP_NHAN"
+      },
+      {
+        "name": "GIAI_QUYET"
+      }
+    ]
+  },
+  "clients": [
+    {
+      "clientId": "cong-mot-cua-web",
+      "enabled": true,
+      "publicClient": true,
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": false,
+      "redirectUris": [
+        "http://localhost:5080/*"
+      ],
+      "webOrigins": [
+        "http://localhost:5080"
+      ],
+      "protocol": "openid-connect",
+      "attributes": {
+        "pkce.code.challenge.method": "S256"
+      }
+    }
+  ]
+}

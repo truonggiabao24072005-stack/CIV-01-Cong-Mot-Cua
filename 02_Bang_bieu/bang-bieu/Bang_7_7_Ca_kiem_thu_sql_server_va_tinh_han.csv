@@ -1,0 +1,11 @@
+﻿Mã,Dữ liệu hoặc tiền điều kiện,Bước chính,Kết quả mong đợi
+"TC29
+UC04",Hồ sơ có phân công hiện hành,Tạo thêm dòng hiện hành trong môi trường thử,Chỉ mục duy nhất có điều kiện chặn dòng thứ hai.
+"TC30
+UC06",Thành phần của thủ tục khác,Ghi bản tệp với thành phần không cùng thủ tục,Trigger từ chối ghi và không tạo liên kết sai.
+"TC31
+UC09",Có sự kiện xử lý,Thử UPDATE hoặc DELETE bằng phiên kiểm thử có quyền phù hợp,Trigger chặn thay đổi nhật ký.
+"TC32
+UC03","Thời hạn ngày làm việc, có cuối tuần và ngày nghỉ",Tiếp nhận với dữ liệu thời gian đã chuẩn bị,"Hạn bỏ qua ngày không đủ điều kiện, giữ giờ mốc."
+"TC33
+UC06","Hồ sơ đã có hạn gốc, yêu cầu bổ sung đang mở",Duyệt theo GIU_NGUYEN,Hạn gốc và hạn hiện hành không đổi.

@@ -1,0 +1,15 @@
+﻿Đặc tả use case UC02,Đặc tả use case UC02
+Tên use case,Tạo và nộp hồ sơ
+Actor,Người dân
+Mô tả,Lưu nháp hoặc nộp hồ sơ trực tuyến qua biểu mẫu bốn bước.
+Tiền điều kiện (Precondition),Người dân đăng nhập. Thủ tục còn tiếp nhận. Nếu sửa nháp thì hồ sơ thuộc người dùng và phiên bản còn hiện hành.
+Hậu điều kiện (Postcondition),"Lưu nháp giữ trạng thái BAN_NHAP. Nộp thành công tạo mã gửi và thời điểm nộp, đưa hồ sơ sang DA_GUI."
+Luồng sự kiện chính (Basic flow),Luồng sự kiện chính (Basic flow)
+Actor,Hệ thống
+1. Chọn thủ tục đang hoạt động hoặc mở bản nháp của mình.,2. Hiển thị thông tin đã lưu và danh sách giấy tờ của thủ tục.
+"3. Nhập thông tin liên hệ, nội dung đề nghị và tải tệp.","4. Ghi nhận khóa tệp theo thành phần. Khi mở lại bản nháp, hiển thị tệp đã lưu."
+5. Xem lại và xác nhận nộp.,"6. Kiểm tra quyền, trạng thái và các mục bắt buộc. Ghi hồ sơ, lịch sử và cấp mã gửi."
+Luồng sự kiện thay thế (Alternate flow),Luồng sự kiện thay thế (Alternate flow)
+5.1. Chọn Lưu nháp.,5.2. Giữ trạng thái BAN_NHAP. Người dân có thể lưu khi còn thiếu tệp.
+3.1. Tệp sai định dạng hoặc quá dung lượng.,3.2. Chỉ ra tệp cần thay. Người dùng chọn tệp khác và tiếp tục.
+"5.3. Nộp thiếu thành phần, tệp không còn trong kho hoặc phiên bản hồ sơ đã cũ.","5.4. Báo mục còn thiếu, yêu cầu tải lại tệp hoặc làm mới hồ sơ tùy lỗi."

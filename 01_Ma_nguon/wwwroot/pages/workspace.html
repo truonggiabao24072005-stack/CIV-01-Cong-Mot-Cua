@@ -1,0 +1,55 @@
+<div class="app">
+  <header class="system-header">
+    <div class="portal-identity">
+      <span class="portal-symbol" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+          <path d="M5 15 20 6l15 9H5Zm3 17h24M5 35h30M11 18v11m9-11v11m9-11v11"/>
+          <circle cx="20" cy="11.5" r="1"/>
+        </svg>
+      </span>
+      <div>
+        <strong>CỔNG MỘT CỬA ĐIỆN TỬ</strong>
+        <p>Tiếp nhận và theo dõi hồ sơ dịch vụ công</p>
+      </div>
+    </div>
+    <span class="project-label" id="workspace-role"></span>
+  </header>
+  <aside class="sidebar">
+    <div class="workspace-label">CHỨC NĂNG</div>
+    <nav id="workspace-nav" aria-label="Chức năng hệ thống"></nav>
+    <a class="sidebar-guide" href="#/guide">Hướng dẫn sử dụng</a>
+    <div class="sidebar-user">
+      <span class="avatar" id="user-initials"></span>
+      <div><strong id="user-name"></strong><small id="user-role"></small></div>
+      <button
+        type="button"
+        id="logout"
+        title="Đăng xuất"
+        aria-label="Đăng xuất"
+      >
+        ↪
+      </button>
+    </div>
+  </aside>
+  <div class="scrim" id="mobile-scrim" hidden></div>
+  <div class="main">
+    <header class="topbar">
+      <div class="breadcrumb">
+        <button
+          class="mobile-menu"
+          id="menu-button"
+          aria-label="Danh mục chức năng" aria-expanded="false" aria-controls="workspace-nav"
+        >
+          ☰</button
+        ><span>Trang chủ</span><span aria-hidden="true">›</span
+        ><strong id="page-title"></strong>
+      </div>
+      <time id="today"></time>
+    </header>
+    <main id="page-content"></main>
+    <footer class="footer">
+      <span>Cổng một cửa điện tử</span
+      ><span>Hệ thống tiếp nhận và theo dõi hồ sơ dịch vụ công</span>
+    </footer>
+  </div>
+</div>

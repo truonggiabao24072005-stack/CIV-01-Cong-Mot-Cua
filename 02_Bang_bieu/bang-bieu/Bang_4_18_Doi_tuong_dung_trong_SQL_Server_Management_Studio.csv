@@ -1,0 +1,7 @@
+﻿Tên,Nhiệm vụ
+v_HoSoTheoDoi,"Theo dõi hồ sơ, thủ tục, mốc và thông tin có liên quan."
+v_PhanCongHienTai,Xem các lượt phân công chưa kết thúc.
+sp_ThongKeThuTuc,Thống kê theo khoảng ngày nộp.
+sp_LichSuHoSo,Xem nhật ký theo HoSoId.
+cmc_bao_cao,Đọc view và chạy procedure báo cáo được cấp.
+cmc_ung_dung,"Quyền nghiệp vụ cần thiết cho ứng dụng, hạn chế sửa nhật ký."

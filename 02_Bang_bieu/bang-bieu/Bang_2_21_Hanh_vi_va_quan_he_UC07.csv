@@ -1,0 +1,7 @@
+﻿Loại,Hành vi,Điều kiện và kết quả
+Khái quát hóa,Lập kết quả thành công,Trường hợp đồng ý giải quyết; phải có tệp kết quả.
+Khái quát hóa,Từ chối giải quyết,Trường hợp từ chối; phải có lý do.
+«include»,"Nhập căn cứ, kết luận và hướng dẫn",Dùng chung cho hai biểu mẫu kết luận trên giao diện.
+«include»,Đính kèm tệp kết quả,Bắt buộc với kết quả thành công.
+«include»,Ghi lý do từ chối,Bắt buộc với từ chối giải quyết.
+Kết quả,Phân biệt thời điểm kết thúc,Thành công chờ phát hành; từ chối được công bố ngay.

@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mxfile host="app.diagrams.net" compressed="false"><diagram id="UC05" name="UC05 Yêu cầu bổ sung">
+    <mxGraphModel dx="1980" dy="965" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1980" pageHeight="965" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="PHÂN RÃ YÊU CẦU BỔ SUNG" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Times New Roman;fontSize=38;fontStyle=1;fontColor=#000000;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="10" y="8" width="1960" height="64" as="geometry"/>
+        </mxCell>
+        <mxCell id="request" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;Lập yêu cầu bổ&lt;br&gt;sung&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;spacing=10;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=40;" vertex="1" parent="1">
+          <mxGeometry x="50" y="495" width="400" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="items" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;Lập danh sách nội&lt;br&gt;dung cần bổ sung&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;spacing=10;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=40;" vertex="1" parent="1">
+          <mxGeometry x="700" y="195" width="440" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="save" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;Ghi yêu cầu và giai&lt;br&gt;đoạn quay lại&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;spacing=10;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=40;" vertex="1" parent="1">
+          <mxGeometry x="700" y="785" width="440" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="component" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;Chỉ định thành&lt;br&gt;phần tài liệu&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;spacing=10;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=40;" vertex="1" parent="1">
+          <mxGeometry x="1580" y="95" width="350" height="125" as="geometry"/>
+        </mxCell>
+        <mxCell id="field" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;Chỉ định trường&lt;br&gt;thông tin cần sửa&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;spacing=10;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=40;" vertex="1" parent="1">
+          <mxGeometry x="1580" y="445" width="350" height="125" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge0" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;«include»&lt;/div&gt;" style="html=1;rounded=0;endArrow=open;endSize=16;endFill=0;startArrow=none;dashed=1;dashPattern=7 5;strokeWidth=1.5;strokeColor=#000000;exitX=0.793705;exitY=0.095355;entryX=0.224623;entryY=0.917334;exitPerimeter=0;entryPerimeter=0;labelWidth=135;fontSize=29;fontFamily=Times New Roman;fontColor=#000000;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="request" target="items">
+          <mxGeometry relative="1" x="0" y="0" as="geometry">
+            <mxPoint x="0.0" y="0.0" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge1" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;«include»&lt;/div&gt;" style="html=1;rounded=0;endArrow=open;endSize=16;endFill=0;startArrow=none;dashed=1;dashPattern=7 5;strokeWidth=1.5;strokeColor=#000000;exitX=0.800221;exitY=0.899834;entryX=0.218111;entryY=0.087037;exitPerimeter=0;entryPerimeter=0;labelWidth=135;fontSize=29;fontFamily=Times New Roman;fontColor=#000000;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="request" target="save">
+          <mxGeometry relative="1" x="0" y="0" as="geometry">
+            <mxPoint x="0.0" y="0.0" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge2" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;«extend»&lt;br&gt;[Cần bổ sung giấy tờ]&lt;/div&gt;" style="html=1;rounded=0;endArrow=open;endSize=16;endFill=0;startArrow=none;dashed=1;dashPattern=7 5;strokeWidth=1.5;strokeColor=#000000;exitX=0.027151;exitY=0.662524;entryX=0.961733;entryY=0.308161;exitPerimeter=0;entryPerimeter=0;labelWidth=273;fontSize=29;fontFamily=Times New Roman;fontColor=#000000;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="component" target="items">
+          <mxGeometry relative="1" x="0" y="0" as="geometry">
+            <mxPoint x="0.0" y="0.0" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge3" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;«extend»&lt;br&gt;[Cần sửa thông tin kê khai]&lt;/div&gt;" style="html=1;rounded=0;endArrow=open;endSize=16;endFill=0;startArrow=none;dashed=1;dashPattern=7 5;strokeWidth=1.5;strokeColor=#000000;exitX=0.115248;exitY=0.180679;entryX=0.852984;entryY=0.854122;exitPerimeter=0;entryPerimeter=0;labelWidth=338;fontSize=29;fontFamily=Times New Roman;fontColor=#000000;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="field" target="items">
+          <mxGeometry relative="1" x="0" y="0" as="geometry">
+            <mxPoint x="0.0" y="0.0" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  </mxfile>

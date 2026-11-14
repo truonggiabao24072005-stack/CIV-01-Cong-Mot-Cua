@@ -1,0 +1,6 @@
+﻿Loại,Hành vi,Điều kiện và kết quả
+«include»,Lập danh sách nội dung cần bổ sung,"Từ 1 đến 20 mục; có vấn đề, lý do và hướng dẫn."
+«include»,Ghi yêu cầu và giai đoạn quay lại,Lưu trạng thái trước bổ sung để tiếp tục đúng giai đoạn.
+«extend»,Chỉ định thành phần tài liệu,Mở rộng mục bổ sung khi liên quan đến giấy tờ.
+«extend»,Chỉ định trường thông tin cần sửa,Mở rộng mục bổ sung khi cần điều chỉnh thông tin kê khai.
+Kết quả,Chuyển Chờ bổ sung,Chỉ lập khi chưa có yêu cầu đang mở.

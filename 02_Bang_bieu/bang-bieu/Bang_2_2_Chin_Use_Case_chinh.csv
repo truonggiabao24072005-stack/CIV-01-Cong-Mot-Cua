@@ -1,0 +1,10 @@
+﻿Mã,Use Case
+UC01,Đăng nhập
+UC02,Tạo và nộp hồ sơ
+UC03,Kiểm tra và tiếp nhận hồ sơ
+UC04,Luân chuyển và phân công
+UC05,Yêu cầu bổ sung
+UC06,Gửi và kiểm tra bổ sung
+UC07,Ghi nhận kết quả xử lý
+UC08,Trả kết quả điện tử
+UC09,Theo dõi hồ sơ và nhận kết quả

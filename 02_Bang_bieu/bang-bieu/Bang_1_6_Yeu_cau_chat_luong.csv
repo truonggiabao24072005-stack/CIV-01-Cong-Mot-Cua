@@ -1,0 +1,5 @@
+﻿Nội dung,Yêu cầu hoặc phạm vi
+Toàn vẹn,Kiểm tra dữ liệu và quyền tại API. Dùng giao dịch và các ràng buộc SQL.
+Khả dụng giao diện,"Có nhãn, hướng dẫn, phản hồi lỗi, bộ lọc và giao diện thu gọn theo chiều rộng."
+Khôi phục,"Sao lưu cơ sở dữ liệu, kho tệp và kho danh tính theo cùng đợt."
+Bảo mật,Chỉ cho tải tệp qua API đã kiểm tra quyền. Giữ thông tin cấu hình nhạy cảm ngoài bản công khai.

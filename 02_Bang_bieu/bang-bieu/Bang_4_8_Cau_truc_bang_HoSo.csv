@@ -1,0 +1,20 @@
+﻿Tên cột,Kiểu dữ liệu,Ràng buộc,Ý nghĩa
+HoSoId,varchar(50),"PK, NN",Định danh nội bộ.
+MaGui,nvarchar(255),"UQ, NULL","Mã cấp lúc nộp, để trống ở bản nháp."
+MaHoSo,nvarchar(255),"UQ, NULL",Mã cấp khi tiếp nhận chính thức.
+ChuHoSoId,varchar(50),"FK, NN",→ NguoiDung.NguoiDungId
+ThuTucId,varchar(50),"FK, NN",→ ThuTuc.ThuTucId
+ThongTinNguoiNop,nvarchar(max),NULL,Thông tin liên hệ được lưu cùng hồ sơ.
+NoiDungDeNghi,nvarchar(max),NULL,Nội dung đề nghị đang dùng.
+TrangThai,nvarchar(255),NN,Trạng thái nghiệp vụ hiện tại.
+NgayNop,datetime2,NULL,Thời điểm người dân nộp hồ sơ.
+NgayTiepNhan,datetime2,NULL,Thời điểm tiếp nhận chính thức.
+MocTinhSLA,datetime2,NULL,Mốc đang dùng để tính hạn.
+SoNgaySLA,int,NULL,Số ngày xử lý.
+DonViSLA,nvarchar(255),NULL,Ngày lịch hoặc ngày làm việc.
+QuyTacBoSung,nvarchar(255),NULL,Quy tắc xử lý hạn sau bổ sung.
+LichApDung,nvarchar(max),NULL,Bản chụp lịch nghỉ và múi giờ.
+HanTraGoc,datetime2,NULL,Mốc hẹn đầu tiên.
+HanTra,datetime2,NULL,Mốc hẹn hiện hành.
+NgayKetThuc,datetime2,NULL,Mốc kết thúc quy trình đã tiếp nhận.
+RowVersion,int,NN,Số phiên bản do ứng dụng quản lý.

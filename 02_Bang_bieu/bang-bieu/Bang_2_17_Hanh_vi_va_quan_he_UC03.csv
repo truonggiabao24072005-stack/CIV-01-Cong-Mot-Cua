@@ -1,0 +1,7 @@
+﻿Loại,Hành vi,Điều kiện và kết quả
+Thao tác riêng,Đánh giá bản tài liệu,Ghi Đạt hoặc Chưa đạt; Chưa đạt phải có lý do.
+Thao tác riêng,Tiếp nhận hồ sơ,"Hồ sơ đã gửi, chưa có yêu cầu bổ sung đang mở."
+«include»,Đối chiếu thành phần và đánh giá,Khi tiếp nhận: đủ thành phần bắt buộc và các bản hiện hành đều Đạt.
+Thao tác riêng,Yêu cầu bổ sung (UC05),Chọn khi thiếu sót có thể khắc phục.
+Thao tác riêng,Từ chối tiếp nhận,"Có căn cứ, chưa có yêu cầu bổ sung đang mở."
+«include»,Ghi căn cứ và lý do từ chối,Bắt buộc khi chọn từ chối; phát hành thông báo từ chối.

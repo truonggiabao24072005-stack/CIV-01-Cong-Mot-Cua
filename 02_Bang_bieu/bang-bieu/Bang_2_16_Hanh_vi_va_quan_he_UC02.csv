@@ -1,0 +1,6 @@
+﻿Loại,Hành vi,Điều kiện và kết quả
+Thao tác riêng,Lưu bản nháp,Cho phép chưa đủ nội dung; chưa cấp mã gửi.
+Thao tác riêng,Nộp hồ sơ,Nộp mới hoặc nộp bản nháp của chính người dân.
+«include»,Ghi nhận dữ liệu kê khai và tài liệu,Dùng chung cho lưu nháp và nộp.
+«include»,Kiểm tra thành phần bắt buộc,Bắt buộc khi nộp; không bắt buộc khi chỉ lưu nháp.
+Kết quả,Cấp mã gửi và ngày nộp,Thuộc kết quả nộp thành công; chưa phải tiếp nhận chính thức.

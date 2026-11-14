@@ -1,0 +1,38 @@
+<div class="page-heading">
+  <div>
+    <h1 id="cases-title">Danh sách hồ sơ</h1>
+    <p id="cases-description">Tra cứu tiến độ và thời hạn xử lý hồ sơ.</p>
+  </div>
+  <a href="#/new" class="btn primary" id="new-case-link">Nộp hồ sơ mới</a>
+</div>
+<section class="panel">
+  <form class="filters" id="case-filter">
+    <div class="search-field">
+      <input
+        name="q"
+        placeholder="Mã hồ sơ, thủ tục hoặc nội dung"
+        aria-label="Tìm kiếm hồ sơ"
+        maxlength="200"
+      />
+    </div>
+    <select name="work" aria-label="Lọc việc cần làm">
+      <option value="">Tất cả công việc</option>
+      <option value="supplement" id="supplement-work-label">Bổ sung cần xử lý</option>
+    </select>
+    <select name="status" aria-label="Lọc trạng thái">
+      <option value="">Tất cả trạng thái</option></select
+    ><select name="deadline" aria-label="Lọc thời hạn">
+      <option value="">Tất cả thời hạn</option>
+      <option value="overdue">Đang quá hạn</option></select
+    ><button type="submit" class="btn primary">Lọc hồ sơ</button><button type="button" class="btn" id="clear-case-filter">Bỏ bộ lọc</button>
+  </form>
+  <p data-error class="error-box" role="alert" hidden></p>
+  <div id="case-list"></div>
+  <div class="pagination">
+    <span id="page-count" role="status"></span>
+    <div>
+      <button class="btn" id="previous-page" disabled>Trang trước</button
+      ><button class="btn" id="next-page" disabled>Trang sau</button>
+    </div>
+  </div>
+</section>

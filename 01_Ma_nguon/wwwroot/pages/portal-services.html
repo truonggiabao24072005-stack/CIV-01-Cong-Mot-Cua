@@ -1,0 +1,20 @@
+<header class="portal-page-header">
+  <div class="portal-container">
+    <p class="portal-crumb"><a href="#/trang-chu">Trang chủ</a> <span aria-hidden="true">/</span> Dịch vụ công</p>
+    <h1>Dịch vụ công trực tuyến</h1>
+    <p>Xem thành phần hồ sơ và thời hạn trước khi nộp.</p>
+  </div>
+</header>
+<section class="portal-container portal-page-content">
+  <form class="portal-search-form service-search" id="public-search">
+    <label for="search-procedure" class="sr-only">Tên hoặc mã thủ tục</label>
+    <input id="search-procedure" name="q" type="search" placeholder="Nhập tên hoặc mã thủ tục" />
+    <button type="submit" class="btn primary">Tìm kiếm</button>
+  </form>
+  <p class="error-box" id="public-error" role="alert" hidden></p>
+  <div class="portal-results-summary">
+    <strong id="procedure-list-label">Thủ tục đang tiếp nhận</strong>
+    <span id="procedure-count" role="status"></span>
+  </div>
+  <div id="public-procedures"><p class="loading">Đang tải danh mục thủ tục…</p></div>
+</section>

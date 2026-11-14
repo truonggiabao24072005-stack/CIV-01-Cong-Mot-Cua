@@ -1,0 +1,8 @@
+﻿Tên cột,Kiểu dữ liệu,Ràng buộc,Ý nghĩa
+YeuCauId,varchar(50),"PK, NN",Định danh nội bộ.
+HoSoId,varchar(50),"FK, NN",→ HoSo.HoSoId
+NguoiYeuCauId,varchar(50),"FK, NN",→ NguoiDung.NguoiDungId
+TrangThai,nvarchar(255),NN,Trạng thái nghiệp vụ hiện tại.
+TrangThaiQuayLai,nvarchar(255),NN,Giai đoạn phục hồi sau bổ sung.
+TaoLuc,datetime2,NN,Thời điểm tạo bản ghi nghiệp vụ.
+DongLuc,datetime2,NULL,Thời điểm đóng yêu cầu.

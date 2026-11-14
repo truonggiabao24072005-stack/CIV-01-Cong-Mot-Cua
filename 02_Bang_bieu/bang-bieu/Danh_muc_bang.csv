@@ -1,0 +1,77 @@
+﻿Tên bảng,Tệp CSV
+Bang_thong_tin_01,Bang_thong_tin_01.csv
+Bang_thong_tin_02,Bang_thong_tin_02.csv
+Bảng 1.1  Bối cảnh nghiệp vụ,Bang_1_1_Boi_canh_nghiep_vu.csv
+Bảng 1.2  Chức năng tham khảo từ cổng dịch vụ công,Bang_1_2_Chuc_nang_tham_khao_tu_cong_dich_vu_cong.csv
+Bảng 1.3  Phạm vi hệ thống,Bang_1_3_Pham_vi_he_thong.csv
+Bảng 1.4  Tác nhân và phạm vi quyền,Bang_1_4_Tac_nhan_va_pham_vi_quyen.csv
+Bảng 1.5  Yêu cầu chức năng,Bang_1_5_Yeu_cau_chuc_nang.csv
+Bảng 1.6  Yêu cầu chất lượng,Bang_1_6_Yeu_cau_chat_luong.csv
+Bảng 1.7  Quy tắc nghiệp vụ và dữ liệu đầu vào,Bang_1_7_Quy_tac_nghiep_vu_va_du_lieu_dau_vao.csv
+Bảng 1.8  Mốc thời gian và chính sách SLA,Bang_1_8_Moc_thoi_gian_va_chinh_sach_SLA.csv
+Bảng 1.9  Biểu mẫu trong sản phẩm,Bang_1_9_Bieu_mau_trong_san_pham.csv
+Bảng 2.1  Tác nhân trong hệ thống,Bang_2_1_Tac_nhan_trong_he_thong.csv
+Bảng 2.2  Chín Use Case chính,Bang_2_2_Chin_Use_Case_chinh.csv
+Bảng 2.3  Đặc tả Use Case UC01,Bang_2_3_Dac_ta_Use_Case_UC01.csv
+Bảng 2.4  Đặc tả Use Case UC02,Bang_2_4_Dac_ta_Use_Case_UC02.csv
+Bảng 2.5  Đặc tả Use Case UC03,Bang_2_5_Dac_ta_Use_Case_UC03.csv
+Bảng 2.6  Đặc tả Use Case UC04,Bang_2_6_Dac_ta_Use_Case_UC04.csv
+Bảng 2.7  Đặc tả Use Case UC05,Bang_2_7_Dac_ta_Use_Case_UC05.csv
+Bảng 2.8  Đặc tả Use Case UC06,Bang_2_8_Dac_ta_Use_Case_UC06.csv
+Bảng 2.9  Đặc tả Use Case UC07,Bang_2_9_Dac_ta_Use_Case_UC07.csv
+Bảng 2.10  Đặc tả Use Case UC08,Bang_2_10_Dac_ta_Use_Case_UC08.csv
+Bảng 2.11  Đặc tả Use Case UC09,Bang_2_11_Dac_ta_Use_Case_UC09.csv
+Bảng 2.12  Đặc tả Use Case UC10,Bang_2_12_Dac_ta_Use_Case_UC10.csv
+Bảng 2.13  Đặc tả Use Case UC11,Bang_2_13_Dac_ta_Use_Case_UC11.csv
+Bảng 2.14  Đặc tả Use Case UC12,Bang_2_14_Dac_ta_Use_Case_UC12.csv
+Bảng 2.15  Hành vi và quan hệ UC01,Bang_2_15_Hanh_vi_va_quan_he_UC01.csv
+Bảng 2.16  Hành vi và quan hệ UC02,Bang_2_16_Hanh_vi_va_quan_he_UC02.csv
+Bảng 2.17  Hành vi và quan hệ UC03,Bang_2_17_Hanh_vi_va_quan_he_UC03.csv
+Bảng 2.18  Hành vi và quan hệ UC04,Bang_2_18_Hanh_vi_va_quan_he_UC04.csv
+Bảng 2.19  Hành vi và quan hệ UC05,Bang_2_19_Hanh_vi_va_quan_he_UC05.csv
+Bảng 2.20  Hành vi và quan hệ UC06,Bang_2_20_Hanh_vi_va_quan_he_UC06.csv
+Bảng 2.21  Hành vi và quan hệ UC07,Bang_2_21_Hanh_vi_va_quan_he_UC07.csv
+Bảng 2.22  Hành vi và quan hệ UC08,Bang_2_22_Hanh_vi_va_quan_he_UC08.csv
+Bảng 2.23  Hành vi và quan hệ UC09,Bang_2_23_Hanh_vi_va_quan_he_UC09.csv
+Bảng 2.24  Hành vi và quan hệ UC06A,Bang_2_24_Hanh_vi_va_quan_he_UC06A.csv
+Bảng 2.25  Hành vi và quan hệ UC06B,Bang_2_25_Hanh_vi_va_quan_he_UC06B.csv
+Bảng 2.26  Hành vi và quan hệ UC09A,Bang_2_26_Hanh_vi_va_quan_he_UC09A.csv
+Bảng 3.1  Trách nhiệm của 13 lớp nghiệp vụ,Bang_3_1_Trach_nhiem_cua_13_lop_nghiep_vu.csv
+Bảng 4.1  Ký hiệu Crow’s Foot,Bang_4_1_Ky_hieu_Crows_Foot.csv
+Bảng 4.2  Áp dụng quy tắc ánh xạ 1 đến 5,Bang_4_2_Ap_dung_quy_tac_anh_xa_1_den_5.csv
+Bảng 4.3  Phạm vi áp dụng quy tắc 6 đến 9,Bang_4_3_Pham_vi_ap_dung_quy_tac_6_den_9.csv
+Bảng 4.4  Cấu trúc bảng BoPhan,Bang_4_4_Cau_truc_bang_BoPhan.csv
+Bảng 4.5  Cấu trúc bảng NguoiDung,Bang_4_5_Cau_truc_bang_NguoiDung.csv
+Bảng 4.6  Cấu trúc bảng ThuTuc,Bang_4_6_Cau_truc_bang_ThuTuc.csv
+Bảng 4.7  Cấu trúc bảng ThanhPhanYeuCau,Bang_4_7_Cau_truc_bang_ThanhPhanYeuCau.csv
+Bảng 4.8  Cấu trúc bảng HoSo,Bang_4_8_Cau_truc_bang_HoSo.csv
+Bảng 4.9  Cấu trúc bảng PhanCongXuLy,Bang_4_9_Cau_truc_bang_PhanCongXuLy.csv
+Bảng 4.10  Cấu trúc bảng TaiLieuHoSo,Bang_4_10_Cau_truc_bang_TaiLieuHoSo.csv
+Bảng 4.11  Cấu trúc bảng KiemTraThanhPhan,Bang_4_11_Cau_truc_bang_KiemTraThanhPhan.csv
+Bảng 4.12  Cấu trúc bảng YeuCauBoSung,Bang_4_12_Cau_truc_bang_YeuCauBoSung.csv
+Bảng 4.13  Cấu trúc bảng NoiDungBoSung,Bang_4_13_Cau_truc_bang_NoiDungBoSung.csv
+Bảng 4.14  Cấu trúc bảng LanBoSung,Bang_4_14_Cau_truc_bang_LanBoSung.csv
+Bảng 4.15  Cấu trúc bảng KetQuaHoSo,Bang_4_15_Cau_truc_bang_KetQuaHoSo.csv
+Bảng 4.16  Cấu trúc bảng LichSuXuLy,Bang_4_16_Cau_truc_bang_LichSuXuLy.csv
+Bảng 4.17  Chỉ mục và trigger trọng tâm,Bang_4_17_Chi_muc_va_trigger_trong_tam.csv
+Bảng 4.18  Đối tượng dùng trong SQL Server Management Studio,Bang_4_18_Doi_tuong_dung_trong_SQL_Server_Management_Studio.csv
+Bảng 4.19  Các bước khởi tạo và sao lưu dữ liệu,Bang_4_19_Cac_buoc_khoi_tao_va_sao_luu_du_lieu.csv
+Bảng 5.1  Thành phần và trách nhiệm,Bang_5_1_Thanh_phan_va_trach_nhiem.csv
+Bảng 5.2  Điểm vào theo nhóm nghiệp vụ,Bang_5_2_Diem_vao_theo_nhom_nghiep_vu.csv
+Bảng 5.3  Điều kiện đọc và lưu dữ liệu,Bang_5_3_Dieu_kien_doc_va_luu_du_lieu.csv
+Bảng 6.1  Nhóm màn hình và điểm vào,Bang_6_1_Nhom_man_hinh_va_diem_vao.csv
+Bảng 6.2  Thành phần giao diện và phản hồi,Bang_6_2_Thanh_phan_giao_dien_va_phan_hoi.csv
+Bảng 7.1  Quy ước trạng thái xác nhận,Bang_7_1_Quy_uoc_trang_thai_xac_nhan.csv
+Bảng 7.2  Ca kiểm thử xác thực và phân quyền,Bang_7_2_Ca_kiem_thu_xac_thuc_va_phan_quyen.csv
+Bảng 7.3  Ca kiểm thử tạo nháp và nộp hồ sơ,Bang_7_3_Ca_kiem_thu_tao_nhap_va_nop_ho_so.csv
+Bảng 7.4  Ca kiểm thử tiếp nhận và luân chuyển,Bang_7_4_Ca_kiem_thu_tiep_nhan_va_luan_chuyen.csv
+Bảng 7.5  Ca kiểm thử bổ sung và bảo toàn dữ liệu,Bang_7_5_Ca_kiem_thu_bo_sung_va_bao_toan_du_lieu.csv
+Bảng 7.6  Ca kiểm thử ghi nhận phát hành và theo dõi,Bang_7_6_Ca_kiem_thu_ghi_nhan_phat_hanh_va_theo_doi.csv
+Bảng 7.7  Ca kiểm thử SQL Server và tính hạn,Bang_7_7_Ca_kiem_thu_sql_server_va_tinh_han.csv
+Bảng 7.8  Ca kiểm thử giao diện tài liệu và quản trị,Bang_7_8_Ca_kiem_thu_giao_dien_tai_lieu_va_quan_tri.csv
+Bảng 7.9  Kết quả chạy kiểm thử,Bang_7_9_Ket_qua_chay_kiem_thu.csv
+Bảng 7.10  Từ yêu cầu đến Use Case và ca kiểm thử,Bang_7_10_Tu_yeu_cau_den_Use_Case_va_ca_kiem_thu.csv
+Bảng 7.11  Hạn chế và hướng hoàn thiện,Bang_7_11_Han_che_va_huong_hoan_thien.csv
+Bảng 7.12  Các phần việc của đồ án,Bang_7_12_Cac_phan_viec_cua_do_an.csv
+Bảng A.1  Nhóm màn hình và thao tác,Bang_A_1_Nhom_man_hinh_va_thao_tac.csv
+"Bảng A.2  Use Case, API và ca kiểm thử",Bang_A_2_Use_Case_API_va_ca_kiem_thu.csv

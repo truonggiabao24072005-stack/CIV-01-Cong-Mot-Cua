@@ -1,0 +1,84 @@
+<div class="page-heading">
+  <div>
+    <h1>Nộp hồ sơ trực tuyến</h1>
+    <p>Nhập thông tin, đính kèm tài liệu và kiểm tra trước khi nộp.</p>
+  </div>
+  <a class="btn" href="#/cases">Hồ sơ của tôi</a>
+</div>
+<ol
+  class="submission-steps"
+  id="submission-steps"
+  aria-label="Các bước nộp hồ sơ"
+>
+  <li data-step-label="1" class="current"><span>1</span>Chọn thủ tục</li>
+  <li data-step-label="2"><span>2</span>Kê khai thông tin</li>
+  <li data-step-label="3"><span>3</span>Thành phần hồ sơ</li>
+  <li data-step-label="4"><span>4</span>Xác nhận và nộp</li>
+</ol>
+<form class="panel submission-form" id="submission-form" novalidate>
+  <header class="form-section-heading">
+    <h2 id="step-title">Bước 1. Chọn thủ tục</h2>
+    <span>Các trường có dấu <b class="required">*</b> là bắt buộc</span>
+  </header>
+  <p data-error class="error-box" hidden role="alert"></p>
+  <section class="form-body" data-step="1">
+    <h3 class="official-fieldset-title">THÔNG TIN CHUNG</h3>
+    <label class="field"
+      >Thủ tục hành chính <b class="required">*</b
+      ><select name="thuTucId" required>
+        <option value="">Chọn thủ tục cần thực hiện</option>
+      </select></label
+    >
+    <div id="selected-procedure"></div>
+  </section>
+  <section class="form-body" data-step="2" hidden>
+    <h3 class="official-fieldset-title">THÔNG TIN NGƯỜI NỘP</h3>
+    <div class="official-form-grid">
+      <label class="field">Họ và tên<input name="hoTen" readonly /></label
+      ><label class="field">Thư điện tử<input name="email" readonly /></label
+      ><label class="field"
+        >Số điện thoại liên hệ<input
+          name="soDienThoai"
+          type="tel"
+          maxlength="30" /></label
+      ><label class="field"
+        >Địa chỉ liên hệ<input name="diaChi" maxlength="500"
+      /></label>
+    </div>
+    <h3 class="official-fieldset-title">NỘI DUNG HỒ SƠ</h3>
+    <label class="field"
+      >Nội dung đề nghị <b class="required">*</b
+      ><textarea
+        name="noiDung"
+        rows="6"
+        maxlength="6000"
+        required
+        placeholder="Ghi rõ nội dung đề nghị giải quyết"
+      ></textarea>
+    </label>
+  </section>
+  <section class="form-body" data-step="3" hidden>
+    <h3 class="official-fieldset-title">THÀNH PHẦN HỒ SƠ</h3>
+    <div id="submission-files"></div>
+  </section>
+  <section class="form-body" data-step="4" hidden>
+    <h3 class="official-fieldset-title">KIỂM TRA THÔNG TIN HỒ SƠ</h3>
+    <div id="submission-review"></div>
+    <label class="declaration"
+      ><input name="agree" type="checkbox" /><span
+        >Tôi cam kết thông tin kê khai và tài liệu đính kèm là chính xác, đầy đủ
+        theo nội dung đề nghị.</span
+      ></label
+    >
+  </section>
+  <footer class="form-footer">
+    <button type="button" class="btn" id="previous-step">Quay lại</button>
+    <div class="actions">
+      <button type="button" class="btn" id="save-draft">Lưu bản nháp</button
+      ><button type="button" class="btn primary" id="next-step">Tiếp tục</button
+      ><button type="submit" class="btn primary" id="submit-case" hidden>
+        Lưu và nộp hồ sơ
+      </button>
+    </div>
+  </footer>
+</form>

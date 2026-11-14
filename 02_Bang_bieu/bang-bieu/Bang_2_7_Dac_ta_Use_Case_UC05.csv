@@ -1,0 +1,15 @@
+﻿Đặc tả use case UC05,Đặc tả use case UC05
+Tên use case,Yêu cầu bổ sung
+Actor,Cán bộ tiếp nhận hoặc cán bộ chuyên môn phụ trách
+Mô tả,Lập yêu cầu chỉ rõ nội dung cần bổ sung và cách thực hiện.
+Tiền điều kiện (Precondition),Hồ sơ ở DA_GUI hoặc DANG_GIAI_QUYET và chưa có yêu cầu mở.
+Hậu điều kiện (Postcondition),"Yêu cầu DANG_CHO, lưu các mục cần bổ sung, chuyển hồ sơ sang CHO_BO_SUNG."
+Luồng sự kiện chính (Basic flow),Luồng sự kiện chính (Basic flow)
+Actor,Hệ thống
+1. Mở hồ sơ và chọn Yêu cầu bổ sung.,2. Kiểm tra quyền phụ trách và xác định hồ sơ có yêu cầu mở hay không.
+"3. Nhập từng mục, vấn đề, lý do và hướng dẫn.",4. Đối chiếu các mục có chọn thành phần với danh mục của đúng thủ tục.
+5. Xác nhận gửi yêu cầu.,"6. Tạo yêu cầu và các mục con. Chuyển hồ sơ sang CHO_BO_SUNG, lưu giai đoạn quay lại."
+Luồng sự kiện thay thế (Alternate flow),Luồng sự kiện thay thế (Alternate flow)
+3.1. Yêu cầu sửa trường thông tin hoặc giải trình chung.,3.2. Lưu mục không gắn thành phần tài liệu.
+5.1. Gửi khi đã có yêu cầu chưa đóng.,5.2. Thông báo đã có yêu cầu mở để cán bộ kiểm tra lại.
+5.3. Chọn xem phiếu bổ sung.,5.4. Dựng phiếu từ yêu cầu đang mở.

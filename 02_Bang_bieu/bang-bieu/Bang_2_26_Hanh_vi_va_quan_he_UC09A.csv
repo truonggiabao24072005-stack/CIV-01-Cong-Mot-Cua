@@ -1,0 +1,5 @@
+﻿Loại,Hành vi,Điều kiện và kết quả
+«include»,Xác nhận thử thách tra cứu,Thử thách có hạn ba phút và chỉ dùng một lần.
+Đầu vào,Mã gửi hoặc mã hồ sơ,"Chỉ tìm hồ sơ đã gửi, không trả bản nháp."
+Kết quả,Trạng thái và các mốc thời gian,Không có tệp hoặc thông tin cá nhân của người nộp.
+Luồng lỗi,Sai mã hoặc thử thách,Báo lỗi và lấy thử thách mới cho lần tra cứu tiếp theo.

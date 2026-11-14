@@ -1,0 +1,10 @@
+﻿Tên cột,Kiểu dữ liệu,Ràng buộc,Ý nghĩa
+NguoiDungId,varchar(50),"PK, NN",Định danh nội bộ.
+Issuer,nvarchar(255),NN,Bên phát hành danh tính.
+Subject,nvarchar(255),NN,Định danh người dùng tại bên phát hành.
+HoTen,nvarchar(255),NN,Tên người dùng khi hiển thị.
+SoDienThoai,nvarchar(255),NULL,Số liên hệ của tài khoản.
+Email,nvarchar(255),NULL,Địa chỉ thư điện tử của tài khoản.
+BoPhanId,varchar(50),"FK, NULL",→ BoPhan.BoPhanId
+HoatDong,bit,NN,Cho phép đối tượng còn sử dụng.
+VaiTro,nvarchar(255),NN,Vai trò nghiệp vụ.

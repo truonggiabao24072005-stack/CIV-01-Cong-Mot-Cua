@@ -1,0 +1,32 @@
+<header class="portal-page-header">
+  <div class="portal-container">
+    <p class="portal-crumb"><a href="#/trang-chu">Trang chủ</a> <span aria-hidden="true">/</span> Tra cứu hồ sơ</p>
+    <h1>Tra cứu hồ sơ</h1>
+    <p>Kiểm tra tiến độ và ngày hẹn trả.</p>
+  </div>
+</header>
+<div class="portal-container portal-page-content portal-lookup-grid">
+  <section class="panel portal-form-panel" aria-labelledby="lookup-heading">
+    <h2 id="lookup-heading">Thông tin tra cứu</h2>
+    <form id="public-lookup">
+      <label class="field">Mã gửi hoặc mã hồ sơ
+        <input name="code" required maxlength="50" placeholder="Nhập mã ghi trên thông báo hoặc giấy tiếp nhận" />
+      </label>
+      <label class="field">
+        <span id="challenge-label">Đang tải phép tính xác nhận…</span>
+        <input name="answer" inputmode="numeric" required maxlength="10" />
+      </label>
+      <button type="submit" class="btn primary" disabled>Tra cứu</button>
+      <button type="button" class="btn" data-retry-challenge hidden>Tải lại phép tính</button>
+      <p data-error role="alert" class="error-box" hidden></p>
+    </form>
+    <div id="lookup-result" aria-live="polite"></div>
+  </section>
+  <aside class="portal-side-note">
+    <h2>Tìm mã ở đâu?</h2>
+    <p>Mã gửi nằm trên thông báo nộp hồ sơ. Mã hồ sơ chính thức nằm trên giấy tiếp nhận và hẹn trả kết quả.</p>
+    <p>Vào tài khoản để xem hồ sơ, tài liệu và kết quả đã phát hành.</p>
+    <button type="button" class="btn" data-auth="login">Đăng nhập</button>
+    <a class="btn" id="lookup-workspace" href="#/cases" hidden>Xem hồ sơ trong tài khoản</a>
+  </aside>
+</div>

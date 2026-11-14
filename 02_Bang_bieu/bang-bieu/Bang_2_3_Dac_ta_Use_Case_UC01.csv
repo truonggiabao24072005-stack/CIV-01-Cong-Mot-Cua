@@ -1,0 +1,14 @@
+﻿Đặc tả use case UC01,Đặc tả use case UC01
+Tên use case,Đăng nhập
+Actor,"Người dân, cán bộ tiếp nhận, cán bộ chuyên môn"
+Mô tả,Xác thực tài khoản cục bộ và mở trang làm việc theo quyền.
+Tiền điều kiện (Precondition),Tài khoản có trong kho danh tính của cấu hình đang dùng. Tài khoản nghiệp vụ còn hoạt động.
+Hậu điều kiện (Postcondition),"Phiên truy cập có token và màn hình làm việc theo vai trò. Nếu đăng nhập từ nút nộp thủ tục, người dân được mở biểu mẫu tương ứng."
+Luồng sự kiện chính (Basic flow),Luồng sự kiện chính (Basic flow)
+Actor,Hệ thống
+1. Mở hộp Đăng nhập.,2. Hiển thị biểu mẫu nhập tên tài khoản và mật khẩu.
+3. Nhập thông tin rồi chọn Đăng nhập.,"4. Xác thực tài khoản, tạo phiên truy cập và mở màn hình làm việc theo vai trò."
+Luồng sự kiện thay thế (Alternate flow),Luồng sự kiện thay thế (Alternate flow)
+3.1. Gửi thông tin sai hoặc dùng tài khoản đã ngừng hoạt động.,3.2. Báo đăng nhập không hợp lệ. Phiên mới chỉ được tạo khi xác thực thành công.
+3.3. Người dân bắt đầu từ nút nộp của một thủ tục.,3.4. Mở biểu mẫu của thủ tục đã chọn sau khi xác thực.
+1.1. Chọn đăng ký tài khoản mới.,1.2. Mở biểu mẫu đăng ký tài khoản người dân.

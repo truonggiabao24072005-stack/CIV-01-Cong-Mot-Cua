@@ -1,0 +1,7 @@
+﻿Tên cột,Kiểu dữ liệu,Ràng buộc,Ý nghĩa
+ThanhPhanId,varchar(50),"PK, NN",Định danh nội bộ.
+ThuTucId,varchar(50),"FK, NN",→ ThuTuc.ThuTucId
+TenThanhPhan,nvarchar(255),NN,Tên giấy tờ hoặc mục tài liệu.
+BatBuoc,bit,NN,Cờ bắt buộc của thành phần.
+HuongDan,nvarchar(max),NN,Nội dung hướng dẫn của bản ghi.
+ThuTu,int,NN,Thứ tự hiển thị thành phần.

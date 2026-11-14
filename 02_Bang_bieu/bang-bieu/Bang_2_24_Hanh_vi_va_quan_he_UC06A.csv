@@ -1,0 +1,5 @@
+﻿Loại,Hành vi,Điều kiện và kết quả
+«include»,Xem nội dung yêu cầu bổ sung,Xem các vấn đề và hướng dẫn của yêu cầu đang chờ.
+«include»,Cung cấp dữ liệu theo từng mục yêu cầu,"Kiểm tra tệp, nội dung thay thế hoặc giải trình theo từng mục."
+«include»,Ghi nhận lần gửi bổ sung,"Tăng số lần, ghi thời điểm gửi, chuyển yêu cầu sang Đã gửi."
+Ràng buộc,Chờ cán bộ đánh giá,Tệp mới chưa thay bản hiện hành; người dân không tự chấp nhận.

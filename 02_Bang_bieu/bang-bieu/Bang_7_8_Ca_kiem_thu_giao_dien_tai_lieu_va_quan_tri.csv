@@ -1,0 +1,11 @@
+﻿Mã,Dữ liệu hoặc tiền điều kiện,Bước chính,Kết quả mong đợi
+"TC34
+UC02","Màn hình hẹp, tài khoản người dân","Mở menu, đi qua các bước và quay lại","Menu và điều hướng thao tác được, dữ liệu bước trước còn giữ theo luồng."
+"TC35
+UC05",Hồ sơ có yêu cầu đang mở,Mở Phiếu bổ sung và xem bản in,"In được vấn đề, lý do, hướng dẫn. Bản hiện tại chưa có hạn bổ sung."
+"TC36
+UC03",Hồ sơ đã được tiếp nhận,Mở Giấy tiếp nhận và chọn In,"Có mã chính thức, mốc tiếp nhận và ngày hẹn. Bản in ghi rõ chứng từ chưa có chữ ký số."
+"TC37
+RF10",Cán bộ tiếp nhận đã đăng nhập,Mở thống kê và tải CSV,Có bảng theo thủ tục và tệp CSV tải được.
+"TC38
+RF10",Thủ tục hoặc bộ phận đang được dùng,Thử đổi thành phần hoặc ngừng bộ phận còn hồ sơ,Từ chối đổi cấu trúc đã dùng và ngừng bộ phận còn hồ sơ chờ.
