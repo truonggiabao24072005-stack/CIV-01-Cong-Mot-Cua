@@ -1,4 +1,4 @@
-﻿Use Case,Điểm vào API tiêu biểu,Ca kiểm thử
+Use Case,Điểm vào API tiêu biểu,Ca kiểm thử
 UC01,POST /api/auth/login · GET /api/me,TC01–TC03
 UC02,POST /api/ho-so · PUT /api/ho-so/{id}/nhap,"TC06–TC10, TC34"
 UC03,POST /api/ho-so/{id}/kiem-tra-tai-lieu · /tiep-nhan,"TC04, TC11–TC13, TC32, TC36"
@@ -8,3 +8,6 @@ UC06,POST /api/ho-so/{id}/gui-bo-sung · /kiem-tra-bo-sung,"TC19–TC22, TC30, T
 UC07,POST /api/ho-so/{id}/ket-qua · /tu-choi,TC23–TC24
 UC08,POST /api/ho-so/{id}/tra-ket-qua,TC25–TC26
 UC09,GET /api/ho-so/{id} · POST /api/tra-cuu,"TC05, TC27–TC28, TC31"
+UC10,POST /api/auth/register,TC39
+UC11,GET /api/quan-tri · POST /api/quan-tri/thu-tuc,TC38
+UC12,GET /api/bao-cao,TC37

@@ -78,7 +78,7 @@ public static class AppSetup
         builder.WebHost.ConfigureKestrel(options => options.Limits.MaxRequestBodySize = 11 * 1024 * 1024);
         builder.Services.AddSwaggerGen(options =>
         {
-            options.SwaggerDoc("v1", new OpenApiInfo { Title = "Cổng một cửa — Backend API", Version = "2.0.0", Description = "API cho 3 vai trò và 9 use case. Đăng nhập ở /api/auth/login, sao chép accessToken rồi bấm Authorize. Các thao tác ghi chạy trên SQL Server thật. Dùng database kiểm thử khi thử lệnh." });
+            options.SwaggerDoc("v1", new OpenApiInfo { Title = "Cổng một cửa — Backend API", Version = "2.0.0", Description = "API cho 3 vai trò, gồm 9 use case nghiệp vụ chính và 3 use case hỗ trợ. Đăng nhập ở /api/auth/login, sao chép accessToken rồi bấm Authorize. Các thao tác ghi chạy trên SQL Server thật. Dùng database kiểm thử khi thử lệnh." });
             options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme { Type = SecuritySchemeType.Http, Scheme = "bearer", BearerFormat = "JWT", Description = "Nhập accessToken nhận từ API đăng nhập, không nhập mật khẩu tại đây." });
             options.OperationFilter<BackendOperationFilter>();
         });

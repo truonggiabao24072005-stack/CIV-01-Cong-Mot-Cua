@@ -1,6 +1,6 @@
 # Đối chiếu sản phẩm với thiết kế
 
-## 3 tác nhân và 9 use case
+## Ba tác nhân và 12 use case
 
 | Use case | Thao tác trong sản phẩm | Vai trò |
 |---|---|---|
@@ -13,8 +13,11 @@
 | UC07 Ghi nhận kết quả xử lý | Kết luận, tệp kết quả; hoặc từ chối có căn cứ | Cán bộ chuyên môn |
 | UC08 Trả kết quả điện tử | Phát hành kết quả thành công; chốt thời điểm kết thúc SLA | Tiếp nhận |
 | UC09 Theo dõi và nhận kết quả | Danh sách, chi tiết, lịch sử, tải kết quả đã phát hành; tra cứu công khai giới hạn | Theo quyền hồ sơ |
+| UC10 Đăng ký tài khoản | Tạo tài khoản người dân | Người dân |
+| UC11 Quản lý danh mục | Cập nhật bộ phận, thủ tục, thành phần và trạng thái người dùng | Tiếp nhận |
+| UC12 Xem báo cáo thống kê | Xem theo thủ tục và xuất CSV | Tiếp nhận |
 
-Quản lý danh mục và thống kê là màn hình hỗ trợ của vai trò tiếp nhận, không bổ sung tác nhân thứ tư. Không có quyền sửa tùy ý trạng thái hồ sơ trong giao diện quản trị.
+UC01–UC09 là các use case chính trên sơ đồ tổng quát. Báo cáo đặc tả thêm UC10–UC12 là các use case hỗ trợ. Không có quyền sửa tùy ý trạng thái hồ sơ trong giao diện quản trị.
 
 ## 13 bảng và cách chia liên kết
 
