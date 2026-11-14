@@ -29,6 +29,8 @@ ASP.NET Core trên .NET 9, Entity Framework Core, SQL Server; giao diện HTML, 
 
 ## Cài đặt và chạy bằng VS Code
 
+Mở thư mục chứa `CongMotCua.csproj` trong VS Code. Sau khi cấu hình và khởi tạo SQL Server, chạy `dotnet watch run` trong Terminal PowerShell.
+
 Cần Windows, **.NET SDK 9**, **SQL Server** đang chạy và tài khoản Windows có quyền tạo cơ sở dữ liệu. Có thể dùng SSMS để xem và quản trị dữ liệu.
 
 Mở đúng thư mục chứa `CongMotCua.csproj` trong VS Code. Tại Terminal PowerShell, chạy lần đầu:
@@ -83,6 +85,7 @@ Khi cập nhật bản chạy, dừng web rồi chạy `setup.ps1 -Build`. Nếu
 - [Tập lệnh SQL tổng hợp](sql/CongMotCua_HoanChinh.sql) dành cho việc đọc, đối chiếu hoặc tạo một cơ sở dữ liệu mới bằng SSMS; không chạy lại phần tạo bảng trên cơ sở dữ liệu đã có bảng.
 - [Hướng dẫn quản trị](docs/QUAN_TRI_SQL_SERVER.md) trình bày khung nhìn, thủ tục, vai trò, sao lưu và khôi phục.
 - Dữ liệu kiểm thử nằm riêng trong `sql/05_Du_lieu_mau.sql` và `sql/du-lieu-mau`. Để chạy trực tiếp script 05, chọn một cơ sở dữ liệu trống đã tạo bảng có tên bắt đầu bằng `CongMotCua_KiemThu`. Để cài cả tài khoản và tệp qua ứng dụng, dùng một bản sao dự án và chạy `setup.ps1 -Database CongMotCua_KiemThu -NapDuLieuMau`. Mật khẩu kiểm thử nằm trong `Identity.SamplePassword` của cấu hình cục bộ.
+- [Danh mục khởi đầu](sql/06_Danh_muc_khoi_dau.sql) thêm hai bộ phận và ba thủ tục thực hành. Chọn cơ sở dữ liệu đã khởi tạo trong SSMS rồi chạy tập lệnh.
 
 ## Tài liệu kỹ thuật
 
