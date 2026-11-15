@@ -92,4 +92,4 @@ Khi cập nhật bản chạy, dừng web rồi chạy `setup.ps1 -Build`. Nếu
 - [Tài liệu API](docs/API.md)
 - [Kết quả kiểm tra](docs/KET_QUA_KIEM_TRA.md)
 - [Kịch bản kiểm thử](docs/KICH_BAN_KIEM_THU.md)
-- [Tài liệu, sơ đồ và thiết kế](../README.md)
+- [Sơ đồ Draw.io](../03_So_do_Drawio/) và [thiết kế Figma](../04_Giao_dien_Figma/)
