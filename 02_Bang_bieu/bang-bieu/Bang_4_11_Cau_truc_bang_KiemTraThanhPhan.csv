@@ -1,7 +1,0 @@
-﻿Tên cột,Kiểu dữ liệu,Ràng buộc,Ý nghĩa
-KiemTraId,varchar(50),"PK, NN",Định danh nội bộ.
-TaiLieuId,varchar(50),"FK, NN",→ TaiLieuHoSo.TaiLieuId
-CanBoId,varchar(50),"FK, NN",→ NguoiDung.NguoiDungId
-KetQua,nvarchar(255),NN,Đạt hoặc chưa đạt đối với bản tệp.
-NhanXet,nvarchar(max),NULL,Nhận xét hoặc lý do đi kèm đánh giá.
-ThoiDiem,datetime2,NN,Thời điểm thực hiện thao tác.

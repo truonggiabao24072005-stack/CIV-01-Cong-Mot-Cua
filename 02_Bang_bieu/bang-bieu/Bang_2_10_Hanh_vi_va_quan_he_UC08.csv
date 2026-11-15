@@ -1,5 +1,0 @@
-﻿Loại,Hành vi,Điều kiện và kết quả
-Thao tác,Trả kết quả điện tử,Do cán bộ tiếp nhận thực hiện khi Đã có kết quả.
-«include»,Kiểm tra kết quả chờ phát hành,"Kết quả thành công, chưa phát hành và tệp còn tồn tại."
-Hậu điều kiện,Hoàn tất hồ sơ,"Ghi người, thời điểm phát hành; chuyển Đã trả kết quả, chốt ngày kết thúc."
-Luồng lỗi,Chưa đủ điều kiện phát hành,Hiện lỗi và giữ nguyên trạng thái hồ sơ.

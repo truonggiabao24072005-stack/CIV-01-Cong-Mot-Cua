@@ -1,5 +1,0 @@
-﻿Loại,Hành vi,Điều kiện và kết quả
-Thao tác riêng,UC06A Gửi đáp ứng bổ sung,Người dân; yêu cầu đang Chờ gửi bổ sung.
-Thao tác riêng,UC06B Kiểm tra đáp ứng,Cán bộ đúng giai đoạn; đã có lần gửi chờ đánh giá.
-«include»,Xem yêu cầu bổ sung,"Dùng chung để biết nội dung, hồ sơ và trạng thái yêu cầu."
-Phân quyền,Người gửi và cán bộ khác vai trò,Người dân gửi; cán bộ đúng giai đoạn mới được kết luận lần gửi.

@@ -1,8 +1,0 @@
-﻿Tên cột,Kiểu dữ liệu,Ràng buộc,Ý nghĩa
-NoiDungId,varchar(50),"PK, NN",Định danh nội bộ.
-YeuCauId,varchar(50),"FK, NN",→ YeuCauBoSung.YeuCauId
-ThanhPhanId,varchar(50),"FK, NULL",→ ThanhPhanYeuCau.ThanhPhanId
-TruongThongTin,nvarchar(255),NULL,Tên trường được yêu cầu điều chỉnh.
-VanDe,nvarchar(max),NN,Vấn đề mà người nộp cần xử lý.
-LyDo,nvarchar(max),NN,Lý do đưa ra yêu cầu.
-HuongDan,nvarchar(max),NN,Nội dung hướng dẫn của bản ghi.

@@ -1,7 +1,0 @@
-﻿Nhóm,Đường dẫn dưới /api,Thành phần
-Phiên,"/auth/login, /me","XacThucController, TaiKhoanController"
-Danh mục,"/thu-tuc, /thu-tuc/{id}/thanh-phan",ThuTucController
-Hồ sơ,"/ho-so, /ho-so/{id}/nhap, /ho-so/{id}/{thaoTac}","HoSoController, WorkflowService"
-Tệp,"/tep, /tai-lieu/{id}, /ho-so/{id}/tep-ket-qua","TaiLieuController, FileStore"
-Tra cứu,"/tra-cuu/thu-thach, /tra-cuu",TraCuuController
-Quản trị,"/quan-tri, /bao-cao","QuanTriController, CatalogService"

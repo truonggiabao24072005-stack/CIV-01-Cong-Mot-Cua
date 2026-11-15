@@ -1,6 +1,0 @@
-﻿Thành phần,Công nghệ,Trách nhiệm
-Trình duyệt,"HTML, CSS, JavaScript","Hiển thị trang, nhận dữ liệu và gọi API."
-API,ASP.NET Core Controller,Tiếp nhận yêu cầu và kiểm tra quyền.
-Nghiệp vụ,Lớp dịch vụ,Kiểm tra điều kiện và xử lý hồ sơ.
-Dữ liệu,"EF Core, SQL Server",Lưu trữ và bảo đảm toàn vẹn dữ liệu.
-Kho tệp và xác thực,"Dịch vụ lưu tệp, JWT",Quản lý tài liệu và phiên truy cập.

@@ -1,5 +1,0 @@
-﻿Tên cột,Kiểu dữ liệu,Ràng buộc,Ý nghĩa
-BoPhanId,varchar(50),"PK, NN",Định danh nội bộ.
-MaBoPhan,nvarchar(255),"UQ, NN",Mã tra cứu trong danh mục bộ phận.
-TenBoPhan,nvarchar(255),NN,Tên dùng trên danh mục và bàn giao.
-HoatDong,bit,NN,Cho phép đối tượng còn sử dụng.

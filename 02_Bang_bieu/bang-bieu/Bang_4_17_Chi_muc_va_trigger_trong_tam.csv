@@ -1,9 +1,0 @@
-﻿Đối tượng,Điều kiện cần giữ
-IX_HoSo_MaGui và IX_HoSo_MaHoSo,Mỗi mã duy nhất khi đã được cấp.
-IX_PhanCongXuLy_HoSoId,Tối đa một phân công chưa kết thúc.
-IX_YeuCauBoSung_HoSoId,Tối đa một yêu cầu có DongLuc trống.
-IX_TaiLieuHoSo_HoSoId_ThanhPhanId,Tối đa một bản hiện hành theo thành phần và hồ sơ.
-TR_TaiLieu_DungHoSoThuTuc,"Tệp, thành phần và lần bổ sung phải cùng phạm vi."
-TR_NoiDungBoSung_DungThanhPhan,Mục yêu cầu chỉ gắn thành phần đúng thủ tục.
-TR_PhanCong_DungCanBo,Người nhận đúng vai trò và bộ phận.
-TR_LichSu_ChiThem,Chặn sửa và xóa sự kiện đã ghi.

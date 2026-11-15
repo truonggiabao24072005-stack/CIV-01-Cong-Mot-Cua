@@ -1,7 +1,0 @@
-﻿Loại,Hành vi,Điều kiện và kết quả
-«include»,Kiểm tra quyền xem hồ sơ,Người dân xem hồ sơ của mình; cán bộ theo phạm vi được cấp.
-«extend»,Xem lịch sử xử lý,Khi chọn thẻ Lịch sử; người dân chỉ thấy sự kiện công khai.
-«extend»,Xem tài liệu hồ sơ,Khi chọn thẻ Tài liệu trong trang chi tiết.
-«extend»,Xem / in chứng từ hồ sơ,"Có giấy hẹn, phiếu bổ sung hoặc thông báo phù hợp giai đoạn."
-«extend»,Xem thông tin kết quả,Có kết quả trong quyền xem; người dân chỉ sau phát hành.
-«extend»,Tải tệp kết quả,Mở rộng Xem thông tin kết quả khi có tệp và quyền tải.

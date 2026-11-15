@@ -23,7 +23,7 @@ ASP.NET Core trên .NET 9, Entity Framework Core, SQL Server; giao diện HTML, 
 | `Api/Models` | Mô hình dữ liệu và dữ liệu gửi lên |
 | `Services` | Quy tắc nghiệp vụ, phân quyền, lưu tệp và danh tính cục bộ |
 | `wwwroot` | Giao diện HTML, CSS, JavaScript và tài nguyên tĩnh |
-| `sql` | Tạo 13 bảng, ràng buộc, quản trị và dữ liệu mẫu |
+| [02_Co_so_du_lieu_SQL](../02_Co_so_du_lieu_SQL/) | Tệp SQL dùng để tạo 13 bảng, đối tượng quản trị và danh mục khởi đầu |
 | `scripts` | Khởi tạo, chạy, dừng và hỗ trợ quản trị SQL Server |
 | `keycloak` | Cấu hình SSO tùy chọn, không cần để chạy mặc định |
 
@@ -73,7 +73,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\stop.ps1
 
 ### Thiết lập danh mục và tài khoản
 
-1. Đăng nhập với tài khoản tiếp nhận vừa cấp. Trong **Quản lý danh mục**, tạo bộ phận chuyên môn, thủ tục, thành phần hồ sơ và thời hạn đã được đơn vị phê duyệt.
+1. Đăng nhập với tài khoản tiếp nhận vừa cấp. Trong **Quản lý danh mục**, tạo hoặc cập nhật bộ phận chuyên môn, thủ tục, thành phần hồ sơ và thời hạn.
 2. Dừng web. Cấp tài khoản chuyên môn bằng `cap-tai-khoan.ps1` với `-VaiTro GIAI_QUYET -MaBoPhan <mã-bộ-phận>` rồi khởi động lại. Mỗi cán bộ có mật khẩu riêng.
 3. Người dân đăng ký tài khoản trên web. Giữ `appsettings.Local.json` và thư mục `.data` trên máy phục vụ để duy trì tài khoản và kho tệp.
 
@@ -81,15 +81,6 @@ Khi cập nhật bản chạy, dừng web rồi chạy `setup.ps1 -Build`. Nếu
 
 ### SQL Server
 
-- Dùng script khởi tạo như hướng dẫn trên để chạy ứng dụng lần đầu.
-- [Tập lệnh SQL tổng hợp](sql/CongMotCua_HoanChinh.sql) dành cho việc đọc, đối chiếu hoặc tạo một cơ sở dữ liệu mới bằng SSMS; không chạy lại phần tạo bảng trên cơ sở dữ liệu đã có bảng.
-- [Hướng dẫn quản trị](docs/QUAN_TRI_SQL_SERVER.md) trình bày khung nhìn, thủ tục, vai trò, sao lưu và khôi phục.
-- Dữ liệu kiểm thử nằm riêng trong `sql/05_Du_lieu_mau.sql` và `sql/du-lieu-mau`. Để chạy trực tiếp script 05, chọn một cơ sở dữ liệu trống đã tạo bảng có tên bắt đầu bằng `CongMotCua_KiemThu`. Để cài cả tài khoản và tệp qua ứng dụng, dùng một bản sao dự án và chạy `setup.ps1 -Database CongMotCua_KiemThu -NapDuLieuMau`. Mật khẩu kiểm thử nằm trong `Identity.SamplePassword` của cấu hình cục bộ.
-- [Danh mục khởi đầu](sql/06_Danh_muc_khoi_dau.sql) thêm hai bộ phận và ba thủ tục thực hành. Chọn cơ sở dữ liệu đã khởi tạo trong SSMS rồi chạy tập lệnh.
-
-## Tài liệu kỹ thuật
-
-- [Tài liệu API](docs/API.md)
-- [Kết quả kiểm tra](docs/KET_QUA_KIEM_TRA.md)
-- [Kịch bản kiểm thử](docs/KICH_BAN_KIEM_THU.md)
-- [Sơ đồ Draw.io](../03_So_do_Drawio/) và [thiết kế Figma](../04_Giao_dien_Figma/)
+- `setup.ps1` tự tạo database nếu cần và cài đối tượng quản trị từ tệp SQL bên ngoài thư mục mã nguồn. Khi giải nén, để `01_Ma_nguon` và `02_Co_so_du_lieu_SQL` cùng cấp.
+- Để cài thủ công, mở [CongMotCua_HoanChinh.sql](../02_Co_so_du_lieu_SQL/CongMotCua_HoanChinh.sql) trong SSMS và nhấn **Execute**. Tệp tạo database `CongMotCua_VanHanh` với 13 bảng và ba thủ tục khởi đầu nếu chưa có dữ liệu. Các mẫu truy vấn và sao lưu ở cuối tệp dùng khi cần.
+- Để nạp tài khoản và tệp thử vào một database riêng, dùng bản sao dự án và chạy `setup.ps1 -Database CongMotCua_KiemThu -NapDuLieuMau`. Mật khẩu thử nằm trong `Identity.SamplePassword` của cấu hình cục bộ.

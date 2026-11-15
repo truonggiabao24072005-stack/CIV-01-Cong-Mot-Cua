@@ -1,5 +1,0 @@
-﻿Loại,Hành vi,Điều kiện và kết quả
-«include»,Chọn cán bộ nhận đúng bộ phận,"Cán bộ và bộ phận đang hoạt động, phù hợp thủ tục."
-«include»,Ghi thông tin phân công,"Lưu người chuyển, người nhận, bộ phận và nội dung bàn giao."
-«extend»,Kết thúc phân công hiện hành,Chỉ phát sinh nếu đã có lượt phân công chưa kết thúc.
-Điều kiện,Hồ sơ được phép phân công,"Đã tiếp nhận hoặc đang giải quyết, không có bổ sung đang mở."

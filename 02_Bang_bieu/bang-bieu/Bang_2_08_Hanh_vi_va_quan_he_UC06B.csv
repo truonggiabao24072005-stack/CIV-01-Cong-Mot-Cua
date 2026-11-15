@@ -1,7 +1,0 @@
-﻿Loại,Hành vi,Điều kiện và kết quả
-«include»,Xem lần gửi đang chờ,"Đúng cán bộ phụ trách, đúng yêu cầu đang mở."
-«include»,Ghi kết luận đánh giá,"Ghi Đạt hoặc Chưa đạt, người đánh giá và thời điểm."
-«extend»,Đánh giá bản tệp mới,Mở rộng Xem lần gửi đang chờ khi chọn đánh giá; tệp phải Đạt trước khi chấp nhận.
-«extend»,Áp dụng dữ liệu được chấp nhận,Đạt và có tệp mới hoặc nội dung đề nghị điều chỉnh.
-«extend»,Áp dụng chính sách thời hạn,"Chấp nhận sau tiếp nhận; giữ nguyên, tính lại hoặc bù thời gian."
-Nhánh thay thế,Chưa đạt,Phải có lý do; yêu cầu quay lại Chờ gửi bổ sung.

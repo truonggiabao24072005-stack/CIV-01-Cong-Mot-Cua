@@ -1,6 +1,0 @@
-﻿STT,Quy tắc,Mức áp dụng,Bảng hoặc cấu trúc minh họa
-1,Thực thể thường,Áp dụng,"Cả 13 bảng có PK riêng, ví dụ HoSoId, ThuTucId và NguoiDungId. Tên thuộc tính và khả năng NULL lấy từ DDL."
-2,Thực thể yếu,Không áp dụng trực tiếp,"LanBoSung và NoiDungBoSung phụ thuộc nghiệp vụ vào YeuCauBoSung nhưng có PK độc lập. LanBoSung có thêm tính duy nhất của (YeuCauId, SoLan)."
-3,Liên kết nhị phân 1–1,Áp dụng,"KetQuaHoSo chứa FK HoSoId và chỉ mục duy nhất. Một hồ sơ có 0 hoặc 1 kết quả, còn mỗi kết quả thuộc đúng một hồ sơ."
-4,Liên kết nhị phân 1–N,Áp dụng,"ThuTuc → ThanhPhanYeuCau, HoSo → YeuCauBoSung, YeuCauBoSung → LanBoSung, TaiLieuHoSo → KiemTraThanhPhan. FK đặt ở phía nhiều."
-5,Liên kết nhị phân N–N,Áp dụng dưới dạng thực thể liên kết có thuộc tính,PhanCongXuLy ghi các lần giao giữa hồ sơ và cán bộ. TaiLieuHoSo liên kết hồ sơ với thành phần trong bối cảnh phiên bản. Các bảng có PK riêng để phân biệt từng lần.

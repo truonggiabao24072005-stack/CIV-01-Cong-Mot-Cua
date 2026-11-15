@@ -1,5 +1,0 @@
-﻿STT,Quy tắc,Mức áp dụng,Bảng hoặc cấu trúc minh họa
-6,Thuộc tính đa trị,Không áp dụng trực tiếp,"Tệp, lần bổ sung và đánh giá là thực thể có khóa và thuộc tính riêng. Chúng minh họa cách tách dữ liệu lặp; thiết kế không dùng ánh xạ thuộc tính đa trị thuần túy."
-7,Liên kết bậc n,Không ánh xạ trực tiếp,PhanCongXuLy chứa thêm bộ phận và người chuyển như vai trò tham chiếu của một lượt giao. DDL không có bảng sinh từ liên kết bậc ba EER thuần.
-8,Chuyên biệt hóa và tổng quát hóa,Không áp dụng trực tiếp,Ba vai trò biểu diễn bằng NguoiDung.VaiTro và kiểm tra tại API. Không có lớp con nghiệp vụ ánh xạ sang bảng con trong DDL.
-9,Kiểu hợp hoặc category,Không áp dụng,Chủ hồ sơ tham chiếu NguoiDung. Bản hiện tại chưa mô hình chủ hồ sơ là hợp của các thực thể cá nhân và tổ chức.

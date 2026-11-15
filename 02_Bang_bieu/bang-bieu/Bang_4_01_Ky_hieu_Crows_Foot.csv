@@ -1,5 +1,0 @@
-﻿Bội số,Cách đọc,Ví dụ
-1,Một và chỉ một,Mỗi bản tài liệu thuộc một hồ sơ.
-0..1,Không hoặc một,Một hồ sơ có thể chưa có kết quả.
-0..N,Không hoặc nhiều,Một hồ sơ có thể chưa có lượt phân công hoặc có nhiều lượt.
-1..N,Một hoặc nhiều,Yêu cầu hợp lệ có ít nhất một mục theo điều kiện API.

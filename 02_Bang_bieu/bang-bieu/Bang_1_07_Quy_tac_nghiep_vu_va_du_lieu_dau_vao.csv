@@ -1,6 +1,0 @@
-﻿Nội dung,Yêu cầu hoặc phạm vi
-RN01,Mã gửi cấp khi nộp. Mã hồ sơ cấp khi tiếp nhận chính thức.
-RN02,"Mỗi hồ sơ có tối đa một phân công hiện tại, một yêu cầu bổ sung mở và một kết quả."
-RN03,Lần bổ sung mới chỉ thay tài liệu hiện hành sau kết luận đạt.
-RN04,Lập kết quả thành công và phát hành là hai thao tác riêng.
-RN05,Hồ sơ cập nhật qua phiên bản hiện hành và ghi lịch sử cùng giao dịch.

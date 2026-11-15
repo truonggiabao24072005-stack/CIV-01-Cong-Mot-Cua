@@ -1,9 +1,0 @@
-﻿Tên cột,Kiểu dữ liệu,Ràng buộc,Ý nghĩa
-PhanCongId,varchar(50),"PK, NN",Định danh nội bộ.
-HoSoId,varchar(50),"FK, NN",→ HoSo.HoSoId
-NguoiChuyenId,varchar(50),"FK, NN",→ NguoiDung.NguoiDungId
-CanBoNhanId,varchar(50),"FK, NN",→ NguoiDung.NguoiDungId
-BoPhanNhanId,varchar(50),"FK, NN",→ BoPhan.BoPhanId
-BatDauLuc,datetime2,NN,Thời điểm bắt đầu lượt phân công.
-KetThucLuc,datetime2,NULL,Mốc kết thúc lượt phân công nếu có.
-NoiDungChuyen,nvarchar(max),NN,Nội dung cán bộ ghi khi bàn giao.

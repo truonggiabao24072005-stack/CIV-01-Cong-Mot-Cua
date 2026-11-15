@@ -1,4 +1,0 @@
-﻿Loại,Hành vi,Điều kiện và kết quả
-«include»,Xác thực thông tin đăng nhập,"Kiểm tra tên đăng nhập, mật khẩu và trạng thái tài khoản."
-«include»,Xác định quyền truy cập,Lấy người dùng nghiệp vụ và vai trò trước khi mở khu làm việc.
-Luồng lỗi,Không đăng nhập được,Hiện thông báo và giữ biểu mẫu đăng nhập.
