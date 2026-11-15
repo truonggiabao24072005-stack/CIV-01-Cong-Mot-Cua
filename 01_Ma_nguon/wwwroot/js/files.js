@@ -1,4 +1,5 @@
 import { upload } from "./api.js";
+import { attachmentRequirement } from "./procedure-guide.js";
 import { $, $$, esc } from "./ui.js";
 
 // Một tệp cho mỗi thành phần trong lần gửi; backend lưu lịch sử các phiên bản.
@@ -6,7 +7,24 @@ export function fileFields(container, components, onBusy = () => {}, savedDocume
   const files = new Map();
   const saved = new Map(savedDocuments.map((document) => [document.thanhPhanId, document.tenTep]));
   const savedLabel = (id) => saved.has(id) ? `${saved.get(id)} (đã lưu)` : "Chưa chọn tệp";
-  container.innerHTML = `<div class="table-scroll"><table class="case-table attachment-table"><thead><tr><th>Thành phần hồ sơ</th><th>Tài liệu</th><th>Thao tác</th></tr></thead><tbody>${components.map((c) => `<tr data-component="${esc(c.id)}"><td><strong>${esc(c.ten)}${c.batBuoc ? ' <b class="required">*</b>' : ""}</strong><small class="cell-sub">${esc(c.huongDan)}</small></td><td data-filename>${esc(savedLabel(c.id))}</td><td><label class="attachment-button">${saved.has(c.id) ? "Thay tệp" : "Chọn tệp"}<input type="file" aria-label="Đính kèm ${esc(c.ten)}" accept=".pdf,.png,.jpg,.jpeg,.txt"></label><button type="button" class="remove-file btn" hidden>Bỏ tệp vừa chọn</button></td></tr>`).join("")}</tbody></table></div><p class="muted">Hỗ trợ PDF, ảnh JPG, PNG và văn bản TXT; tối đa 10 MB mỗi tệp.</p><p class="error-box" data-file-error hidden role="alert"></p>`;
+  container.innerHTML = components.length ? `
+    <p class="muted">Mỗi thành phần nhận một tệp PDF, JPG, PNG hoặc TXT, tối đa 10 MB. Nếu giấy tờ có nhiều trang, nên gộp thành một PDF theo đúng thứ tự.</p>
+    <div class="table-scroll"><table class="case-table attachment-table">
+      <thead><tr><th scope="col">Giấy tờ cần đính kèm</th><th scope="col">Tệp đã chọn</th><th scope="col">Thao tác</th></tr></thead>
+      <tbody>${components.map((c, index) => {
+        const guideId = `${container.id}-guide-${index}`;
+        return `<tr data-component="${esc(c.id)}">
+          <td><strong>${esc(c.ten)}</strong> ${attachmentRequirement(c)}
+            <small class="cell-sub preserve" id="${esc(guideId)}">${esc(c.huongDan)}</small></td>
+          <td data-filename aria-live="polite">${esc(savedLabel(c.id))}</td>
+          <td><label class="attachment-button">${saved.has(c.id) ? "Thay tệp" : "Chọn tệp"}
+            <input type="file" aria-label="Đính kèm ${esc(c.ten)}" aria-describedby="${esc(guideId)}" accept=".pdf,.png,.jpg,.jpeg,.txt"></label>
+            <button type="button" class="remove-file btn" hidden>Bỏ tệp vừa chọn</button></td>
+        </tr>`;
+      }).join("")}</tbody>
+    </table></div>
+    <p class="error-box" data-file-error hidden role="alert"></p>`
+    : '<p class="muted">Không có giấy tờ cần đính kèm ở bước này.</p>';
   let busy = false;
   container.onchange = async (event) => {
     if (!event.target.matches('input[type="file"]')) return;

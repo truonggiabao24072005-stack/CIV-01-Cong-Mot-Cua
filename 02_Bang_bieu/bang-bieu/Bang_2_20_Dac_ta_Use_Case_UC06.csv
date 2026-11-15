@@ -1,14 +1,14 @@
-﻿Đặc tả use case UC06,Đặc tả use case UC06
+﻿Đặc tả use case UC06,
 Tên use case,Gửi và kiểm tra bổ sung
 Actor,Người dân và cán bộ phụ trách
 Mô tả,Người dân gửi đáp ứng. Cán bộ đánh giá lần gửi và cập nhật hồ sơ.
 Tiền điều kiện (Precondition),Gửi khi yêu cầu DANG_CHO. Duyệt khi yêu cầu DA_GUI và có lần gửi chưa đánh giá.
 Hậu điều kiện (Postcondition),"Chưa đạt thì quay về DANG_CHO. Đạt thì đóng yêu cầu, quay về giai đoạn trước và xử lý lại hạn nếu có SLA."
-Luồng sự kiện chính (Basic flow),Luồng sự kiện chính (Basic flow)
+Luồng sự kiện chính (Basic flow),
 Actor,Hệ thống
 "1. Người dân đọc yêu cầu rồi gửi tệp, giải trình hoặc thông tin cần điều chỉnh.",2. Tạo lần gửi và giữ bản tệp mới ở trạng thái chưa hiện hành.
 3. Cán bộ mở lần gửi và đánh giá bản tệp mới nếu có.,4. Lưu đánh giá theo bản tệp. Chặn kết luận Đạt nếu còn bản mới chưa đạt.
 5. Cán bộ kết luận Đạt cho lần gửi.,"6. Đóng yêu cầu, cập nhật bản hiện hành và đưa hồ sơ về giai đoạn trước. Xử lý hạn theo cấu hình."
-Luồng sự kiện thay thế (Alternate flow),Luồng sự kiện thay thế (Alternate flow)
+Luồng sự kiện thay thế (Alternate flow),
 5.1. Cán bộ chọn Chưa đạt và nhập lý do.,5.2. Lưu nhận xét và mở lại yêu cầu để người dân gửi lần sau.
 3.1. Chỉ gửi giải trình dù yêu cầu nêu thay tệp.,3.2. Từ chối lần gửi và yêu cầu tải tệp thay thế.

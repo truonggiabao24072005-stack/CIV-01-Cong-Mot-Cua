@@ -13,6 +13,7 @@ public sealed class RequestValidationFilter : IActionFilter
             throw new BusinessError("Dữ liệu yêu cầu không đúng định dạng.");
 
         Text(context.HttpContext.Request.Query["q"].FirstOrDefault(), "Từ khóa", 200);
+        Text(context.HttpContext.Request.Query["thuTucId"].FirstOrDefault(), "Thủ tục", 50);
         foreach (var value in context.ActionArguments.Values)
         {
             switch (value)

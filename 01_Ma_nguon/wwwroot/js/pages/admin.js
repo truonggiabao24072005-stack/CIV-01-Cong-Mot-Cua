@@ -186,7 +186,11 @@ export async function catalogPage(root, actor) {
 export async function reportPage(root, actor) {
   if (actor.vaiTro !== "TIEP_NHAN")
     throw new Error("Bạn không có quyền xem báo cáo.");
-  const rows = await api("/bao-cao");
+  const form = $("#report-filter", root);
+  const exportButton = $("#export-report", root);
+  const message = $("#report-error", root);
+  let rows = [];
+  let loading = false;
   const values = (r) => [
     r.thuTuc,
     r.tong,
@@ -196,16 +200,45 @@ export async function reportPage(root, actor) {
     r.hoanTatDungHan,
     r.hoanTatTreHan,
   ];
-  $("#report-rows", root).innerHTML =
-    rows
-      .map(
-        (row) =>
-          `<tr>${values(row)
-            .map((value) => `<td>${esc(value)}</td>`)
-            .join("")}</tr>`,
-      )
-      .join("") || '<tr><td colspan="7">Chưa có hồ sơ để thống kê.</td></tr>';
-  $("#export-report", root).onclick = () => {
+  function draw() {
+    $("#report-rows", root).innerHTML = rows.map((row) =>
+      `<tr>${values(row).map((value) => `<td>${esc(value)}</td>`).join("")}</tr>`,
+    ).join("") || '<tr><td colspan="7">Không có hồ sơ trong khoảng ngày đã chọn.</td></tr>';
+    $("#report-summary", root).textContent =
+      `${rows.reduce((sum, row) => sum + row.tong, 0).toLocaleString("vi-VN")} hồ sơ đã nộp · ${rows.length} thủ tục`;
+  }
+  async function load() {
+    if (loading) return;
+    loading = true;
+    exportButton.disabled = true;
+    errorBox(message, "");
+    $("#report-summary", root).textContent = "Đang tải số liệu…";
+    $("#report-rows", root).replaceChildren();
+    const query = new URLSearchParams();
+    for (const name of ["tuNgay", "denNgay"]) {
+      if (form.elements[name].value) query.set(name, form.elements[name].value);
+    }
+    try {
+      rows = await api("/bao-cao?" + query);
+      if (root.isConnected) {
+        draw();
+        exportButton.disabled = !rows.length;
+      }
+    } catch (e) {
+      rows = [];
+      $("#report-summary", root).textContent = "";
+      errorBox(message, e);
+    } finally {
+      loading = false;
+    }
+  }
+  form.onsubmit = (event) => { event.preventDefault(); load(); };
+  $("#clear-report", root).onclick = () => {
+    if (loading) return;
+    form.reset();
+    load();
+  };
+  exportButton.onclick = () => {
     const heads = [
       "Thủ tục",
       "Tổng số",
@@ -234,4 +267,5 @@ export async function reportPage(root, actor) {
     link.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   };
+  await load();
 }

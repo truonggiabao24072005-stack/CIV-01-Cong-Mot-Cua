@@ -33,8 +33,8 @@ public class QuanTriController(WorkflowService workflow, CatalogService catalog)
     }
 
     [HttpGet("bao-cao")]
-    public async Task<object> GetBaoCao()
+    public async Task<object> GetBaoCao(DateOnly? tuNgay, DateOnly? denNgay)
     {
-        return await catalog.Report(await workflow.Actor(User));
+        return await catalog.Report(await workflow.Actor(User), tuNgay, denNgay);
     }
 }

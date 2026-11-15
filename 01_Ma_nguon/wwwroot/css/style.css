@@ -310,7 +310,8 @@ input[type="checkbox"] {
   white-space: nowrap;
   border-bottom: 1px solid var(--line);
 }
-.case-table td {
+.case-table td,
+.procedure-documents tbody th {
   padding: 15px 16px;
   vertical-align: top;
   border-bottom: 1px solid #e4e7e9;
@@ -353,6 +354,106 @@ input[type="checkbox"] {
 .pagination > div {
   display: flex;
   gap: 8px;
+}
+.case-list-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 18px;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+}
+.case-list-controls strong {
+  margin-right: auto;
+}
+.case-list-controls label {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.case-list-controls select {
+  min-height: 36px;
+  padding: 5px 8px;
+}
+#case-filter select[name="thuTucId"] {
+  max-width: min(100%, 330px);
+}
+.dashboard-progress {
+  padding: 16px 20px 8px;
+}
+.dashboard-progress h3 {
+  font-size: 15px;
+  margin: 0 0 8px;
+}
+.status-breakdown {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.status-breakdown li + li {
+  border-top: 1px solid var(--line);
+}
+.status-breakdown a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 7px 0;
+}
+.case-milestones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(165px, 100%), 1fr));
+  gap: 1px;
+  margin: 14px 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+.case-milestones div {
+  min-width: 0;
+  background: #fff;
+  padding: 13px 15px;
+}
+.case-milestones dt {
+  font-size: 13px;
+  color: #555e67;
+}
+.case-milestones dd {
+  margin: 5px 0 0;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.request-card-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+}
+.request-card-heading h3 {
+  margin: 0;
+}
+.request-card-heading time {
+  color: #555e67;
+  font-size: 13px;
+}
+.supplement-items {
+  padding-left: 22px;
+}
+.supplement-items li p {
+  margin: 4px 0 6px;
+}
+.report-filters {
+  align-items: end;
+}
+.report-filters .field {
+  margin: 0;
+}
+.report-summary,
+#report-error {
+  margin: 12px 20px;
 }
 .badge {
   display: inline-block;
@@ -401,6 +502,38 @@ input[type="checkbox"] {
 .procedure-facts dd {
   margin: 0;
   overflow-wrap: anywhere;
+}
+.procedure-documents tbody th {
+  background: transparent;
+  color: inherit;
+  white-space: normal;
+}
+.procedure-preparation {
+  margin: 16px 0;
+  padding: 14px 16px;
+  border-left: 3px solid #b99455;
+  background: #f7f3e8;
+}
+.procedure-preparation h4 {
+  margin: 0;
+}
+.procedure-preparation ol {
+  margin: 8px 0 12px;
+  padding-left: 20px;
+}
+.procedure-preparation li + li {
+  margin-top: 6px;
+}
+.procedure-preparation p {
+  margin: 0;
+}
+.badge.attachment-required {
+  background: #faeaea;
+  color: #9b3939;
+}
+.attachment-button:focus-within {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
 }
 
 /* Trang công khai */

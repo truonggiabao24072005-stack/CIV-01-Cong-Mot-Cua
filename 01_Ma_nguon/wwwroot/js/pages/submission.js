@@ -1,6 +1,7 @@
 import { api, post } from "../api.js";
 import { $, $$, esc, errorBox, route, toast } from "../ui.js";
 import { fileFields } from "../files.js";
+import { declarationGuide, procedureDocuments } from "../procedure-guide.js";
 
 export async function submissionPage(root, actor, initialId) {
   if (actor.vaiTro !== "NGUOI_NOP")
@@ -27,6 +28,7 @@ export async function submissionPage(root, actor, initialId) {
     updateButtons();
     $("#selected-procedure", root).innerHTML = "";
     $("#submission-files", root).innerHTML = "";
+    $("#submission-content-guide", root).textContent = "";
     if (!proc) return;
     try {
       const result = await api(
@@ -34,8 +36,10 @@ export async function submissionPage(root, actor, initialId) {
       );
       if (current !== generation) return;
       components = result;
+      $("#submission-content-guide", root).textContent = declarationGuide(proc);
       $("#selected-procedure", root).innerHTML =
-        `<dl class="procedure-facts"><dt>Mã thủ tục</dt><dd>${esc(proc.ma)}</dd><dt>Tên thủ tục</dt><dd>${esc(proc.ten)}</dd><dt>Thời hạn giải quyết</dt><dd>${proc.soNgaySLA} ${proc.donViSLA === "NGAY_LAM_VIEC" ? "ngày làm việc" : "ngày lịch"} từ khi tiếp nhận</dd><dt>Hướng dẫn</dt><dd>${esc(proc.moTa)}</dd></dl><h3 class="official-fieldset-title">THÀNH PHẦN CẦN CHUẨN BỊ</h3><ul>${components.map((c) => `<li>${esc(c.ten)} — ${c.batBuoc ? "Bắt buộc" : "Theo trường hợp"}</li>`).join("")}</ul>`;
+        `<dl class="procedure-facts"><dt>Mã thủ tục</dt><dd>${esc(proc.ma)}</dd><dt>Tên thủ tục</dt><dd>${esc(proc.ten)}</dd><dt>Thời hạn giải quyết</dt><dd>${proc.soNgaySLA} ${proc.donViSLA === "NGAY_LAM_VIEC" ? "ngày làm việc" : "ngày lịch"} từ khi tiếp nhận</dd><dt>Hướng dẫn</dt><dd>${esc(proc.moTa)}</dd></dl>
+        ${procedureDocuments(proc, components)}`;
       files = fileFields(
         $("#submission-files", root),
         components,
@@ -77,13 +81,12 @@ export async function submissionPage(root, actor, initialId) {
     $("#submit-case", root).hidden = step !== 4;
     if (step === 4) {
       const proc = procedures.find((p) => p.id === select.value);
+      const attachments = files.values();
       $("#submission-review", root).innerHTML =
-        `<dl class="procedure-facts"><dt>Thủ tục</dt><dd>${esc(proc.ten)}</dd><dt>Người nộp</dt><dd>${esc(actor.ten)}</dd><dt>Liên hệ</dt><dd>${esc([form.elements.soDienThoai.value, form.elements.diaChi.value].filter(Boolean).join(" · "))}</dd><dt>Nội dung đề nghị</dt><dd class="preserve">${esc(form.elements.noiDung.value)}</dd></dl><h3>Tài liệu đính kèm</h3><ul>${files
-          .values()
-          .map((f) => `<li>${esc(f.name)}</li>`)
-          .join(
-            "",
-          )}</ul><p>Kết quả được nhận dưới dạng điện tử sau khi phát hành.</p>`;
+        `<dl class="procedure-facts"><dt>Thủ tục</dt><dd>${esc(proc.ten)}</dd><dt>Người nộp</dt><dd>${esc(actor.ten)}</dd><dt>Liên hệ</dt><dd>${esc([form.elements.soDienThoai.value, form.elements.diaChi.value].filter(Boolean).join(" · "))}</dd><dt>Nội dung đề nghị</dt><dd class="preserve">${esc(form.elements.noiDung.value)}</dd></dl>
+        <h3>Tài liệu đính kèm</h3>
+        ${attachments.length ? `<ul>${attachments.map((f) => `<li>${esc(f.name)}</li>`).join("")}</ul>` : "<p>Hồ sơ này không có tệp đính kèm.</p>"}
+        <p>Kết quả được nhận dưới dạng điện tử sau khi phát hành.</p>`;
     }
     updateButtons();
     window.scrollTo({ top: 0 });
@@ -103,14 +106,15 @@ export async function submissionPage(root, actor, initialId) {
       form.elements.noiDung.focus();
       return;
     }
-    if (
-      step === 3 &&
-      components.some(
-        (c) => c.batBuoc && !files.values().some((f) => f.thanhPhanId === c.id),
-      )
-    ) {
-      errorBox(error, "Vui lòng đính kèm đủ thành phần bắt buộc.");
-      return;
+    if (step === 3) {
+      const selected = new Set(files.values().map((file) => file.thanhPhanId));
+      const missing = components.filter((c) => c.batBuoc && !selected.has(c.id));
+      if (missing.length) {
+        errorBox(error, `Vui lòng đính kèm: ${missing.map((c) => c.ten).join(", ")}.`);
+        const row = $$("[data-component]", root).find((node) => node.dataset.component === missing[0].id);
+        $("input[type=file]", row).focus();
+        return;
+      }
     }
     if (step < 4 && select.value && files) {
       step++;

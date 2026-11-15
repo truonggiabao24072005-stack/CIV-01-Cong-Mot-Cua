@@ -1,0 +1,7 @@
+﻿Loại,Hành vi,Điều kiện và kết quả
+Chuyên biệt hóa,Đánh giá bản tài liệu,Ghi Đạt hoặc Chưa đạt; Chưa đạt phải có lý do.
+Chuyên biệt hóa,Tiếp nhận hồ sơ,"Hồ sơ đã gửi, chưa có yêu cầu bổ sung đang mở."
+«include»,Đối chiếu thành phần và đánh giá,Khi tiếp nhận: đủ thành phần bắt buộc và các bản hiện hành đều Đạt.
+Chuyên biệt hóa,Yêu cầu bổ sung (UC05),Chọn khi thiếu sót có thể khắc phục.
+Chuyên biệt hóa,Từ chối tiếp nhận,"Có căn cứ, chưa có yêu cầu bổ sung đang mở."
+«include»,Ghi căn cứ và lý do từ chối,Bắt buộc khi chọn từ chối; phát hành thông báo từ chối.

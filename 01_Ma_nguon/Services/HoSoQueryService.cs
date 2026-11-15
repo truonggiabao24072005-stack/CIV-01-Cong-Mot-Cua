@@ -17,10 +17,17 @@ public sealed class HoSoQueryService(AppDb db, WorkflowService workflow)
         return pending.Where(h => db.YeuCauBoSung.Any(y => y.HoSoId == h.Id && y.DongLuc == null && y.TrangThai == "DA_GUI" && y.TrangThaiQuayLai == stage));
     }
 
-    public async Task<object> List(Actor actor, string? q, string? status, string? deadline, string? work, int page, int pageSize)
+    public async Task<object> List(Actor actor, string? q, string? status, string? deadline, string? work,
+        int page, int pageSize, string? thuTucId, string? sort, bool includeFilters)
     {
         var a = actor;
         var query = workflow.Visible(a).AsNoTracking();
+        var procedures = includeFilters
+            ? await db.ThuTuc.AsNoTracking().Where(t => query.Any(h => h.ThuTucId == t.Id))
+                .OrderBy(t => t.MaThuTuc).Select(t => new { t.Id, ma = t.MaThuTuc, ten = t.TenThuTuc }).ToListAsync()
+            : null;
+        if (!string.IsNullOrWhiteSpace(thuTucId))
+            query = query.Where(h => h.ThuTucId == thuTucId);
         if (!string.IsNullOrWhiteSpace(q))
         {
             q = q.Trim();
@@ -36,11 +43,15 @@ public sealed class HoSoQueryService(AppDb db, WorkflowService workflow)
         pageSize = Math.Clamp(pageSize, 1, 50);
         var total = await query.CountAsync();
         page = Math.Clamp(page, 1, Math.Max(1, (int)Math.Ceiling((double)total / pageSize)));
+        var byDeadline = sort == "deadline";
+        var oldest = sort == "oldest";
         var items = await (
             from h in query
             join t in db.ThuTuc on h.ThuTucId equals t.Id
             join n in db.NguoiDung on h.ChuHoSoId equals n.Id
-            orderby h.NgayNop descending, h.Id
+            orderby byDeadline && h.HanTra == null, oldest && h.NgayNop == null,
+                byDeadline ? h.HanTra : null, oldest ? h.NgayNop : null,
+                h.NgayNop descending, h.Id
             select new
             {
                 h.Id,
@@ -50,6 +61,7 @@ public sealed class HoSoQueryService(AppDb db, WorkflowService workflow)
                 h.TrangThai,
                 h.NgayNop,
                 h.HanTra,
+                h.NgayKetThuc,
                 boSung = db.YeuCauBoSung.Where(y => y.HoSoId == h.Id && y.DongLuc == null).Select(y => new
                 {
                     y.TrangThai,
@@ -71,7 +83,8 @@ public sealed class HoSoQueryService(AppDb db, WorkflowService workflow)
             items,
             total,
             page,
-            pageSize
+            pageSize,
+            procedures
         }
 
         );

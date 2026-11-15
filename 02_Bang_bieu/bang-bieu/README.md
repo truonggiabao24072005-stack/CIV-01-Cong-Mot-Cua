@@ -1,3 +1,3 @@
-# Bảng biểu
+# Bảng biểu báo cáo CIV-01
 
-Các bảng được trích từ bản báo cáo hiện tại dưới dạng CSV UTF-8. Bản định dạng, ô ghép và chú thích chính thức nằm trong tệp Word. Danh_muc_bang.csv liệt kê tên bảng và tệp tương ứng.
+Thư mục gồm 63 bảng đánh số và danh mục từ viết tắt của bản Word cuối. Mở [Danh mục bảng](Danh_muc_bang.csv) để tra tệp theo số bảng.

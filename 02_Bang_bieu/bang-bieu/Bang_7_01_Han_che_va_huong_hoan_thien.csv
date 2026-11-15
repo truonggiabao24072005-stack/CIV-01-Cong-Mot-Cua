@@ -1,6 +1,6 @@
 ﻿Vấn đề,Thay đổi thiết kế,Điểm xác nhận
-Đáp ứng yêu cầu bổ sung,Kiểm tra đủ dữ liệu theo từng mục. Có thể bổ sung quy trình miễn hoặc thay thế giấy tờ.,TC19 đã chặn thiếu tệp. Quy trình miễn giấy tờ nằm ngoài phạm vi hiện tại.
+Đáp ứng yêu cầu bổ sung,Kiểm tra đủ dữ liệu theo từng mục. Có thể bổ sung quy trình miễn hoặc thay thế giấy tờ.,API chặn nộp khi thiếu tệp bắt buộc. Quy trình miễn giấy tờ nằm ngoài phạm vi hiện tại.
 Hạn bổ sung và ngày hẹn mới,"Thêm thời hạn phù hợp từng giai đoạn, ghi lịch sử và áp dụng biểu mẫu tương ứng.",Thử quá hạn và điều kiện hẹn lại.
 Mã tra cứu công khai,Tra cứu nhận cả mã gửi và mã hồ sơ. Kết quả công khai chỉ gồm trạng thái và các mốc thời gian.,TC27 kiểm tra tra cứu bằng mã gửi và mã hồ sơ.
-Kết quả và bản in,"Lưu dữ liệu lúc phát hành, đối chiếu Mẫu 01–06 khi triển khai các chức năng liên quan.",Kiểm in lại chứng từ sau khi hồ sơ có thay đổi.
+Kết quả và bản in,"Lưu dữ liệu lúc phát hành, đối chiếu Mẫu 01–06 khi triển khai các chức năng liên quan.",Kiểm tra bản in khi hồ sơ thay đổi.
 Triển khai nhiều đơn vị,"Giới hạn phạm vi tiếp nhận, phân biệt nội dung bàn giao với thông báo cho người dân.",Thử truy cập theo vai trò và phạm vi đơn vị.

@@ -1,5 +1,5 @@
 import { api } from "../api.js";
-import { $, $$, esc, ROLES, STATES, rowsTable, route, errorBox } from "../ui.js";
+import { $, $$, esc, ROLES, STATES, badge, rowsTable, route, errorBox } from "../ui.js";
 import { procedureDialog } from "./public.js";
 
 export async function dashboardPage(root, actor) {
@@ -52,6 +52,11 @@ export async function dashboardPage(root, actor) {
   ).join("");
   $("#recent-cases", root).innerHTML = rowsTable(cases.items, actor);
   $("#overdue-count", root).textContent = stats.quaHan;
+  $("#status-breakdown", root).innerHTML = Object.keys(STATES)
+    .filter((status) => count(status) > 0)
+    .map((status) => `<li><a href="${route("cases")}?${new URLSearchParams({ status })}">
+      ${badge(status)} <strong>${count(status).toLocaleString("vi-VN")}</strong>
+    </a></li>`).join("") || "<li>Chưa có hồ sơ.</li>";
 }
 
 export async function casesPage(root, actor, params) {
@@ -59,22 +64,26 @@ export async function casesPage(root, actor, params) {
   $("#cases-title", root).textContent = citizen ? "Hồ sơ của tôi" : "Danh sách hồ sơ";
   $("#cases-description", root).textContent = citizen
     ? "Xem bước tiếp theo của từng hồ sơ hoặc lọc hồ sơ đang cần bổ sung."
-    : "Lọc hồ sơ theo trạng thái, thời hạn hoặc lượt bổ sung đang chờ bạn kiểm tra.";
+    : "Lọc hồ sơ theo thủ tục, trạng thái, thời hạn hoặc lượt bổ sung đang chờ bạn kiểm tra.";
   $("#supplement-work-label", root).textContent = citizen
     ? "Cần gửi bổ sung" : "Chờ tôi kiểm tra bổ sung";
   $("#new-case-link", root).hidden = !citizen;
   const form = $("#case-filter", root);
-  const { q, status, deadline, work } = form.elements;
+  const { q, status, deadline, work, thuTucId, sort, pageSize } = form.elements;
+  const requestedProcedure = params.get("thuTucId") || "";
+  if (requestedProcedure) thuTucId.add(new Option(requestedProcedure, requestedProcedure));
   for (const [value, text] of Object.entries(STATES))
     status.add(new Option(text, value));
-  for (const field of [q, status, deadline, work])
+  for (const field of [q, status, deadline, work, thuTucId, sort])
     field.value = params.get(field.name) ?? "";
+  pageSize.value = ["20", "50"].includes(params.get("pageSize")) ? params.get("pageSize") : "10";
   const page = Math.max(1, Math.min(1_000_000, Number.parseInt(params.get("page"), 10) || 1));
   function filters(targetPage) {
     const query = new URLSearchParams();
-    for (const field of [q, status, deadline, work]) {
+    for (const field of [q, status, deadline, work, thuTucId, sort]) {
       if (field.value.trim()) query.set(field.name, field.value.trim());
     }
+    if (pageSize.value !== "10") query.set("pageSize", pageSize.value);
     if (targetPage > 1) query.set("page", String(targetPage));
     return query;
   }
@@ -95,7 +104,7 @@ export async function casesPage(root, actor, params) {
     if (work.value) status.value = "";
     show();
   };
-  deadline.onchange = () => show();
+  for (const field of [deadline, thuTucId, sort, pageSize]) field.onchange = () => show();
   $("#clear-case-filter", root).onclick = () => {
     form.reset();
     show();
@@ -107,13 +116,25 @@ export async function casesPage(root, actor, params) {
     query.delete("page");
     const request = new URLSearchParams(query);
     request.set("page", String(page));
-    request.set("pageSize", "10");
+    request.set("pageSize", pageSize.value);
+    request.set("includeFilters", "true");
     const result = await api("/ho-so?" + request);
     if (!root.isConnected) return;
+    if (Array.isArray(result.procedures)) {
+      thuTucId.replaceChildren(new Option("Tất cả thủ tục", ""));
+      for (const procedure of result.procedures)
+        thuTucId.add(new Option(`${procedure.ma} — ${procedure.ten}`, procedure.id));
+      if (requestedProcedure && !result.procedures.some((p) => p.id === requestedProcedure))
+        thuTucId.add(new Option("Thủ tục không có hồ sơ", requestedProcedure));
+      thuTucId.value = requestedProcedure;
+      thuTucId.disabled = false;
+    }
     if (result.page > 1) query.set("page", String(result.page));
     table.innerHTML = rowsTable(result.items, actor, query.toString());
-    $("#page-count", root).textContent =
-      `${result.total} hồ sơ · Trang ${result.page}/${Math.max(1, Math.ceil(result.total / result.pageSize))}`;
+    $("#case-total", root).textContent = `${result.total.toLocaleString("vi-VN")} hồ sơ phù hợp`;
+    $("#page-count", root).textContent = result.total
+      ? `${(result.page - 1) * result.pageSize + 1}–${Math.min(result.page * result.pageSize, result.total)} / ${result.total} hồ sơ · Trang ${result.page}/${Math.ceil(result.total / result.pageSize)}`
+      : "Không có hồ sơ";
     const previous = $("#previous-page", root);
     const next = $("#next-page", root);
     previous.disabled = result.page <= 1;

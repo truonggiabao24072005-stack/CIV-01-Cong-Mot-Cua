@@ -1,15 +1,18 @@
 <a class="back-link" id="case-back" href="#/cases">‹ Quay về danh sách hồ sơ</a>
 <div id="case-heading"></div>
 <div id="case-next"></div>
+<dl id="case-milestones" class="case-milestones" aria-label="Các mốc hồ sơ"></dl>
 <div id="case-alerts"></div>
 <div id="case-actions" class="action-bar"></div>
 <div id="draft-editor"></div>
 <div class="detail-grid">
   <section class="panel detail-content">
-    <div class="tabs" id="detail-tabs">
-      <button data-tab="overview" class="active">Thông tin hồ sơ</button
-      ><button data-tab="files">Tài liệu và đánh giá</button
-      ><button data-tab="history">Lịch sử xử lý</button>
+    <div class="tabs" id="detail-tabs" role="group" aria-label="Nội dung hồ sơ">
+      <button type="button" data-tab="overview" aria-pressed="true" class="active">Thông tin hồ sơ</button>
+      <button type="button" data-tab="files" aria-pressed="false">Tài liệu</button>
+      <button type="button" data-tab="supplement" aria-pressed="false">Bổ sung</button>
+      <button type="button" data-tab="history" aria-pressed="false">Lịch sử xử lý</button>
+      <button type="button" data-tab="result" aria-pressed="false">Kết quả</button>
     </div>
     <div class="detail-body" id="detail-body"></div>
   </section>

@@ -26,7 +26,7 @@ Nhận `{ "accessToken": "...", "expiresIn": 3600 }`. Các API riêng cần head
 | GET /thu-tuc/{id}/thanh-phan | Thành phần của thủ tục đang tiếp nhận. Thủ tục đã ngừng nhận trả 404 ở đường dẫn công khai. |
 | GET /tra-cuu/thu-thach; POST /tra-cuu | Xác nhận dùng một lần, tra cứu mã giới hạn thông tin |
 | GET /can-bo | Cán bộ chuyên môn đang hoạt động; không dành cho người dân |
-| GET /ho-so | Lọc theo quyền; q, status, deadline=overdue, work=supplement, page, pageSize |
+| GET /ho-so | Lọc theo quyền với q, thuTucId, status, deadline=overdue, work=supplement, page, pageSize. Dùng sort=oldest hoặc sort=deadline để đổi thứ tự và includeFilters=true để nhận thủ tục trong phạm vi quyền xem. |
 | GET /thong-ke | Thống kê theo phạm vi quyền, gồm boSungCanThaoTac cùng phạm vi với work=supplement |
 | POST /ho-so | Tạo nháp hoặc tạo và nộp; người dân |
 | GET /ho-so/{id} | Chi tiết, tệp, yêu cầu/lần bổ sung, phân công, lịch sử theo quyền |
@@ -39,7 +39,7 @@ Nhận `{ "accessToken": "...", "expiresIn": 3600 }`. Các API riêng cần head
 | POST /quan-tri/bo-phan | Thêm hoặc sửa bộ phận. Từ chối ngừng hoạt động khi còn thủ tục đang dùng, hồ sơ chờ xử lý hoặc phân công hiệu lực. |
 | POST /quan-tri/thu-tuc | Thêm/sửa thủ tục, thành phần, SLA; giữ cấu trúc khi đã dùng |
 | POST /quan-tri/nguoi-dung | Bật/tắt hoạt động; không tự khóa hoặc khóa cán bộ còn việc |
-| GET /bao-cao | Thống kê theo thủ tục; tiếp nhận |
+| GET /bao-cao | Tiếp nhận xem thống kê theo thủ tục. Có thể lọc ngày nộp theo giờ Việt Nam bằng tuNgay, denNgay dạng yyyy-MM-dd. |
 
 Swagger liệt kê các đường dẫn và phương thức của API. Khi dùng Keycloak, các đường dẫn đăng nhập và đăng ký cục bộ được ẩn.
 

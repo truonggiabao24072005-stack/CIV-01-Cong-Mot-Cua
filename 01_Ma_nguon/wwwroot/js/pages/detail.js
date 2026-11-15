@@ -33,6 +33,14 @@ export async function detailPage(root, actor, id, returnQuery) {
     const { actions } = availableActions(d, actor);
     const next = $("#case-next", root);
     next.innerHTML = `<p class="case-next-step"><span>Bước tiếp theo</span> <strong>${nextCaseStep(h, actor, y)}</strong></p>`;
+    $("#case-milestones", root).innerHTML = [
+      ["Mã gửi", h.maGui || "Chưa nộp"],
+      ["Ngày tiếp nhận", h.ngayTiepNhan ? date(h.ngayTiepNhan) : "Chưa tiếp nhận"],
+      ["Ngày hẹn trả", h.hanTra ? date(h.hanTra) : "Chưa có"],
+      ["Ngày kết thúc", h.ngayKetThuc ? date(h.ngayKetThuc) : "Chưa kết thúc"],
+    ].map(([label, value]) => `<div><dt>${label}</dt><dd>${esc(value)}</dd></div>`).join("");
+    $('[data-tab="files"]', root).textContent = `Tài liệu (${d.taiLieu.length})`;
+    $('[data-tab="supplement"]', root).textContent = `Bổ sung (${d.yeuCauBoSung.length})`;
     $("#case-heading", root).innerHTML =
       `<div class="page-heading detail-heading"><div><h1>${esc(h.ma)}</h1><p>${esc(d.thuTuc.ten)}</p></div><div class="actions">${badge(h.trangThai)}<button class="btn" data-reload>Tải lại</button>${h.ngayTiepNhan ? '<button class="btn" data-document="receipt">Xem / in giấy hẹn</button>' : ""}</div></div>`;
     $("[data-reload]", root).onclick = () => load().catch(fail);
@@ -85,10 +93,47 @@ export async function detailPage(root, actor, id, returnQuery) {
       h = d.hoSo,
       body = $("#detail-body", root);
     $$("[data-tab]", root).forEach((button) => {
-      button.classList.toggle("active", button.dataset.tab === activeTab);
+      const active = button.dataset.tab === activeTab;
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-pressed", String(active));
     });
     if (activeTab === "history") {
-      body.innerHTML = `<div class="timeline">${d.lichSu.map((x) => `<article><span class="timeline-dot"></span><div class="timeline-top"><strong>${esc(ACTIONS[x.hanhDong.toLowerCase().replaceAll("_", "-")] || "Cập nhật hồ sơ")}</strong><time>${date(x.thoiDiem)}</time></div><p class="preserve">${esc(x.noiDung)}</p><small>${esc(x.nguoiThucHien)}</small></article>`).join("")}</div>`;
+      body.innerHTML = d.lichSu.length
+        ? `<div class="timeline">${d.lichSu.map((x) => `<article><span class="timeline-dot"></span><div class="timeline-top"><strong>${esc(ACTIONS[x.hanhDong.toLowerCase().replaceAll("_", "-")] || "Cập nhật hồ sơ")}</strong><time>${date(x.thoiDiem)}</time></div><p class="preserve">${esc(x.noiDung)}</p><small>${esc(x.nguoiThucHien)}</small></article>`).join("")}</div>`
+        : '<p class="empty">Chưa có lịch sử xử lý để hiển thị.</p>';
+      return;
+    }
+    if (activeTab === "result") {
+      body.innerHTML = d.ketQua
+        ? `<section class="result-card" id="published-result" tabindex="-1">
+          <h3>${d.ketQua.loai === "THANH_CONG" ? "Kết quả giải quyết" : "Quyết định từ chối"}</h3>
+          <p class="preserve">${esc(d.ketQua.noiDung)}</p>
+          ${d.ketQua.lyDoTuChoi ? `<p><strong>Lý do:</strong> ${esc(d.ketQua.lyDoTuChoi)}</p>` : ""}
+          <p>${d.ketQua.traLuc ? "Phát hành: " + date(d.ketQua.traLuc) : "Chờ phát hành"}</p>
+          <div class="actions">
+            ${d.ketQua.traLuc ? '<button type="button" class="btn primary" data-document="result">Xem / in thông báo</button>' : ""}
+            ${d.coTepKetQua ? '<button type="button" class="btn" data-preview-result>Xem tệp kết quả</button><button type="button" class="btn" data-result>Tải tệp</button>' : ""}
+          </div>
+        </section>`
+        : '<p class="empty">Chưa có kết quả được hiển thị cho hồ sơ này.</p>';
+      return;
+    }
+    if (activeTab === "supplement") {
+      body.innerHTML = d.yeuCauBoSung.map((request) => `<article class="request-card">
+        <div class="request-card-heading">
+          <h3>${request.dongLuc ? "Yêu cầu đã đóng" : "Yêu cầu đang mở"}</h3>
+          <time>${date(request.taoLuc)}</time>
+        </div>
+        <ol class="supplement-items">${request.noiDungChiTiet.map((item) => `<li>
+          <strong>${esc(item.vanDe)}</strong><p>${esc(item.lyDo)}</p><p>${esc(item.huongDan)}</p>
+        </li>`).join("")}</ol>
+        ${request.lanGui.length ? request.lanGui.map((entry) => `<div class="submission-row">
+          <strong>Lần ${esc(entry.soLan)} · ${date(entry.guiLuc)}</strong>
+          <p class="preserve">${esc(entry.noiDungGiaiTrinh || "Đã nộp nội dung bổ sung")}</p>
+          ${entry.thongTinDieuChinh ? `<p>Đề nghị sửa: ${esc(entry.thongTinDieuChinh)}</p>` : ""}
+          <small>${entry.danhGia === "DAT" ? "Đạt" : entry.danhGia === "CHUA_DAT" ? "Chưa đạt" : "Chờ kiểm tra"} ${esc(entry.nhanXet)}</small>
+        </div>`).join("") : '<p class="muted">Chưa có lần gửi bổ sung.</p>'}
+      </article>`).join("") || '<p class="empty">Hồ sơ chưa có yêu cầu bổ sung.</p>';
       return;
     }
     if (activeTab === "files") {
@@ -104,9 +149,7 @@ export async function detailPage(root, actor, id, returnQuery) {
       return;
     }
     const contact = contactInfo(h);
-    body.innerHTML = `<p class="section-kicker">NGƯỜI NỘP</p><strong>${esc(d.nguoiNop.ten)}</strong><p>${esc(contact.email || d.nguoiNop.lienHe)}</p>${contact.soDienThoai ? `<p>Điện thoại: ${esc(contact.soDienThoai)}</p>` : ""}${contact.diaChi ? `<p>Địa chỉ: ${esc(contact.diaChi)}</p>` : ""}<p class="section-kicker">NỘI DUNG ĐỀ NGHỊ</p><p class="preserve">${esc(h.noiDung)}</p><dl class="procedure-facts"><dt>Mã gửi</dt><dd>${esc(h.maGui || "Chưa nộp")}</dd><dt>Mã hồ sơ</dt><dd>${esc(h.maHoSo || "Chưa tiếp nhận")}</dd><dt>Ngày nộp</dt><dd>${date(h.ngayNop)}</dd></dl>
-      ${d.ketQua ? `<section class="result-card" id="published-result" tabindex="-1"><div><h3>${d.ketQua.loai === "THANH_CONG" ? "Kết quả giải quyết" : "Quyết định từ chối"}</h3><p class="preserve">${esc(d.ketQua.noiDung)}</p>${d.ketQua.lyDoTuChoi ? `<p>Lý do: ${esc(d.ketQua.lyDoTuChoi)}</p>` : ""}<p>${d.ketQua.traLuc ? "Phát hành: " + date(d.ketQua.traLuc) : "Chờ phát hành"}</p>${d.ketQua.traLuc ? '<button type="button" class="btn primary" data-document="result">Xem / in thông báo</button>' : ""} ${d.coTepKetQua ? '<button type="button" class="btn" data-preview-result>Xem tệp kết quả</button> <button type="button" class="btn" data-result>Tải tệp</button>' : ""}</div></section>` : ""}
-      ${d.yeuCauBoSung.length ? "<h3>Yêu cầu bổ sung và các lần gửi</h3>" : ""}${d.yeuCauBoSung.map((r) => `<section class="request-card"><strong>${esc(r.noiDung)}</strong><p>${r.dongLuc ? "Đã bổ sung đầy đủ" : "Đang mở"} · ${r.soLanGui} lần gửi</p>${r.lanGui.map((l) => `<div class="submission-row"><b>Lần ${l.soLan} · ${date(l.guiLuc)}</b><p class="preserve">${esc(l.noiDungGiaiTrinh || "Bổ sung tài liệu")}</p>${l.thongTinDieuChinh ? `<p>Đề nghị sửa: ${esc(l.thongTinDieuChinh)}</p>` : ""}<small>${l.danhGia === "DAT" ? "Đạt" : l.danhGia === "CHUA_DAT" ? "Chưa đạt" : "Chờ kiểm tra"} ${esc(l.nhanXet)}</small></div>`).join("")}</section>`).join("")}
+    body.innerHTML = `<p class="section-kicker">NGƯỜI NỘP</p><strong>${esc(d.nguoiNop.ten)}</strong><p>${esc(contact.email || d.nguoiNop.lienHe)}</p>${contact.soDienThoai ? `<p>Điện thoại: ${esc(contact.soDienThoai)}</p>` : ""}${contact.diaChi ? `<p>Địa chỉ: ${esc(contact.diaChi)}</p>` : ""}<p class="section-kicker">NỘI DUNG ĐỀ NGHỊ</p><p class="preserve">${esc(h.noiDung) || "Chưa khai nội dung."}</p><dl class="procedure-facts"><dt>Mã hồ sơ</dt><dd>${esc(h.maHoSo || "Chưa tiếp nhận")}</dd><dt>Ngày nộp</dt><dd>${h.ngayNop ? date(h.ngayNop) : "Chưa nộp"}</dd></dl>
       ${d.luanChuyen.length ? "<h3>Lịch sử phân công</h3>" : ""}${d.luanChuyen.map((l) => `<section class="request-card"><strong>${esc(l.canBo)} · ${esc(l.boPhan)}</strong><p>${date(l.chuyenLuc)} — ${l.ketThucLuc ? date(l.ketThucLuc) : "Đang phụ trách"}</p><p>${esc(l.noiDung)}</p></section>`).join("")}`;
   }
   $("#detail-tabs", root).onclick = (event) => {
@@ -133,7 +176,7 @@ export async function detailPage(root, actor, id, returnQuery) {
         fail,
       );
     if (event.target.closest("[data-open-result]")) {
-      activeTab = "overview";
+      activeTab = "result";
       drawTab();
       const result = $("#published-result", root);
       result?.scrollIntoView({ block: "nearest" });

@@ -133,13 +133,27 @@ public sealed class CatalogService(AppDb db)
         );
     }
 
-    public async Task<object> Report(Actor actor)
+    public async Task<object> Report(Actor actor, DateOnly? tuNgay, DateOnly? denNgay)
     {
         EnsureReception(actor);
+        if (tuNgay > denNgay)
+            throw new BusinessError("Từ ngày phải trước hoặc bằng đến ngày.");
+        var cases = db.HoSo.AsNoTracking().Where(h => h.TrangThai != "BAN_NHAP");
+        // Ngày do người dùng chọn là ngày tại Việt Nam, các cột hồ sơ lưu UTC.
+        if (tuNgay is { } startDay && startDay != DateOnly.MinValue)
+        {
+            var start = startDay.ToDateTime(TimeOnly.MinValue, DateTimeKind.Utc).AddHours(-7);
+            cases = cases.Where(h => h.NgayNop >= start);
+        }
+        if (denNgay is { } endDay)
+        {
+            var end = endDay.ToDateTime(TimeOnly.MaxValue, DateTimeKind.Utc).AddHours(-7);
+            cases = cases.Where(h => h.NgayNop <= end);
+        }
         var now = DateTime.UtcNow;
         return await (
-            from h in db.HoSo.AsNoTracking()join t in db.ThuTuc on h.ThuTucId equals t.Id
-            where h.TrangThai != "BAN_NHAP"
+            from h in cases
+            join t in db.ThuTuc on h.ThuTucId equals t.Id
             group h by new
             {
                 t.Id,

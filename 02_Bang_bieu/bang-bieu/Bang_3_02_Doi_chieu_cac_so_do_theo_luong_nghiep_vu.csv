@@ -1,0 +1,5 @@
+﻿Luồng nghiệp vụ,Use Case phân rã,Tuần tự,Hoạt động
+Lưu nháp và nộp hồ sơ. Nộp chỉ được thực hiện khi đã đủ thành phần bắt buộc.,UC02 · Hình 2.3,Hình 3.9,Hình 3.18
+Kiểm tra và tiếp nhận. Cán bộ có thể yêu cầu bổ sung hoặc từ chối. Hồ sơ được tiếp nhận mới chuyển sang phân công.,UC03–UC04 · Hình 2.4–2.5,Hình 3.10–3.11,Hình 3.19
+"Bổ sung hồ sơ. Người dân gửi đáp ứng, cán bộ đánh giá đạt hoặc yêu cầu gửi lại.",UC05–UC06B · Hình 2.6–2.9,Hình 3.12–3.13,Hình 3.20
+"Ghi nhận, phát hành và nhận kết quả. Nhánh từ chối có thông báo riêng. Người dân tải kết quả đã phát hành.",UC07–UC09A · Hình 2.10–2.13,Hình 3.14–3.16,Hình 3.21

@@ -1,7 +1,7 @@
 <div class="page-heading">
   <div>
     <h1>Nộp hồ sơ trực tuyến</h1>
-    <p>Nhập thông tin, đính kèm tài liệu và kiểm tra trước khi nộp.</p>
+    <p>Xem giấy tờ cần chuẩn bị, kê khai và kiểm tra hồ sơ trước khi nộp.</p>
   </div>
   <a class="btn" href="#/cases">Hồ sơ của tôi</a>
 </div>
@@ -53,8 +53,10 @@
         rows="6"
         maxlength="6000"
         required
+        aria-describedby="submission-content-guide"
         placeholder="Ghi rõ nội dung đề nghị giải quyết"
       ></textarea>
+      <small id="submission-content-guide"></small>
     </label>
   </section>
   <section class="form-body" data-step="3" hidden>

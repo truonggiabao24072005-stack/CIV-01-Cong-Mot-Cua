@@ -1,13 +1,13 @@
-﻿Đặc tả use case UC08,Đặc tả use case UC08
+﻿Đặc tả use case UC08,
 Tên use case,Trả kết quả điện tử
 Actor,Cán bộ tiếp nhận
 Mô tả,Bộ phận tiếp nhận phát hành kết quả điện tử đã được ghi nhận.
 Tiền điều kiện (Precondition),Hồ sơ DA_CO_KET_QUA. Kết quả chưa phát hành và tệp vẫn tồn tại trong kho.
 Hậu điều kiện (Postcondition),"Hồ sơ DA_TRA_KET_QUA, có người và thời điểm phát hành, chốt thời điểm kết thúc."
-Luồng sự kiện chính (Basic flow),Luồng sự kiện chính (Basic flow)
+Luồng sự kiện chính (Basic flow),
 Actor,Hệ thống
 1. Mở hồ sơ có kết quả chờ trả.,2. Hiển thị thông tin kết quả và thao tác Trả kết quả cho vai trò tiếp nhận.
 3. Kiểm tra và xác nhận phát hành. Có thể ghi chú.,"4. Kiểm tra lại tệp và trạng thái. Lưu người phát hành, thời điểm và mốc kết thúc."
-Luồng sự kiện thay thế (Alternate flow),Luồng sự kiện thay thế (Alternate flow)
+Luồng sự kiện thay thế (Alternate flow),
 3.1. Xác nhận khi tệp đã mất hoặc kết quả đã được phát hành.,3.2. Báo lỗi và giữ mốc hiện tại.
 3.3. Chuyên môn thử phát hành kết quả thành công.,3.4. API từ chối thao tác ngoài quyền.

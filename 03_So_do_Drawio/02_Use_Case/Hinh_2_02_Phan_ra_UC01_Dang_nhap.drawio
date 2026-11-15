@@ -7,21 +7,21 @@
         <mxCell id="title" value="PHÂN RÃ ĐĂNG NHẬP" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Times New Roman;fontSize=30;fontStyle=1;fontColor=#000000;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="10" y="8" width="1430" height="52" as="geometry"/>
         </mxCell>
-        <mxCell id="login" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;Đăng nhập&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;spacing=10;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=32;" vertex="1" parent="1">
+        <mxCell id="login" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;Đăng nhập&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;spacing=10;fontStyle=0;fillColor=#E9EDF0;strokeColor=#59636E;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=32;" vertex="1" parent="1">
           <mxGeometry x="50" y="245" width="390" height="125" as="geometry"/>
         </mxCell>
-        <mxCell id="auth" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;Xác thực thông tin đăng nhập&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;spacing=10;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=32;" vertex="1" parent="1">
+        <mxCell id="auth" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;Xác thực thông tin đăng nhập&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;spacing=10;fontStyle=0;fillColor=#E9EDF0;strokeColor=#59636E;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=32;" vertex="1" parent="1">
           <mxGeometry x="880" y="95" width="520" height="125" as="geometry"/>
         </mxCell>
-        <mxCell id="role" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;Xác định quyền truy cập&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;spacing=10;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=32;" vertex="1" parent="1">
+        <mxCell id="role" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;Xác định quyền truy cập&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;spacing=10;fontStyle=0;fillColor=#E9EDF0;strokeColor=#59636E;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=32;" vertex="1" parent="1">
           <mxGeometry x="880" y="405" width="520" height="125" as="geometry"/>
         </mxCell>
-        <mxCell id="edge0" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;«include»&lt;/div&gt;" style="html=1;rounded=0;endArrow=open;endSize=16;endFill=0;startArrow=none;dashed=1;dashPattern=7 5;strokeWidth=1.5;strokeColor=#000000;exitX=0.943080;exitY=0.268311;entryX=0.089847;entryY=0.785962;exitPerimeter=0;entryPerimeter=0;labelWidth=110;fontSize=23;fontFamily=Times New Roman;fontColor=#000000;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="login" target="auth">
+        <mxCell id="edge0" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;«include»&lt;/div&gt;" style="html=1;rounded=0;endArrow=open;endSize=16;endFill=0;startArrow=none;dashed=1;dashPattern=7 5;strokeWidth=1.5;strokeColor=#59636E;exitX=0.943080;exitY=0.268311;entryX=0.089847;entryY=0.785962;exitPerimeter=0;entryPerimeter=0;labelWidth=110;fontSize=23;fontFamily=Times New Roman;fontColor=#000000;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="login" target="auth">
           <mxGeometry relative="1" x="0" y="0" as="geometry">
             <mxPoint x="0.0" y="0.0" as="offset"/>
           </mxGeometry>
         </mxCell>
-        <mxCell id="edge1" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;«include»&lt;/div&gt;" style="html=1;rounded=0;endArrow=open;endSize=16;endFill=0;startArrow=none;dashed=1;dashPattern=7 5;strokeWidth=1.5;strokeColor=#000000;exitX=0.936668;exitY=0.743558;entryX=0.098788;entryY=0.201623;exitPerimeter=0;entryPerimeter=0;labelWidth=110;fontSize=23;fontFamily=Times New Roman;fontColor=#000000;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="login" target="role">
+        <mxCell id="edge1" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;«include»&lt;/div&gt;" style="html=1;rounded=0;endArrow=open;endSize=16;endFill=0;startArrow=none;dashed=1;dashPattern=7 5;strokeWidth=1.5;strokeColor=#59636E;exitX=0.936668;exitY=0.743558;entryX=0.098788;entryY=0.201623;exitPerimeter=0;entryPerimeter=0;labelWidth=110;fontSize=23;fontFamily=Times New Roman;fontColor=#000000;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="login" target="role">
           <mxGeometry relative="1" x="0" y="0" as="geometry">
             <mxPoint x="0.0" y="0.0" as="offset"/>
           </mxGeometry>

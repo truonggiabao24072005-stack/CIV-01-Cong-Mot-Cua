@@ -3,9 +3,20 @@
     <h1>Tình hình giải quyết hồ sơ</h1>
     <p>Thống kê hồ sơ đã nộp. Hồ sơ nháp không tính vào báo cáo.</p>
   </div>
-  <button class="btn primary" id="export-report">Tải báo cáo</button>
+  <button class="btn primary" id="export-report" disabled>Tải báo cáo CSV</button>
 </div>
-<section class="panel table-scroll">
+<section class="panel">
+  <form class="filters report-filters" id="report-filter">
+    <label class="field">Ngày nộp từ <input name="tuNgay" type="date"></label>
+    <label class="field">Đến hết ngày <input name="denNgay" type="date"></label>
+    <div class="actions">
+      <button type="submit" class="btn primary">Lọc báo cáo</button>
+      <button type="button" class="btn" id="clear-report">Xem mọi thời điểm</button>
+    </div>
+  </form>
+  <p class="report-summary" id="report-summary" role="status"></p>
+  <p class="error-box" id="report-error" role="alert" hidden></p>
+  <div class="table-scroll">
   <table class="case-table">
     <thead>
       <tr>
@@ -20,4 +31,5 @@
     </thead>
     <tbody id="report-rows"></tbody>
   </table>
+  </div>
 </section>

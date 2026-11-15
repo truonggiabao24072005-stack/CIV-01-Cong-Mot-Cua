@@ -1,4 +1,5 @@
 import { api, signIn, register } from "../api.js";
+import { procedureDocuments } from "../procedure-guide.js";
 import {
   $,
   $$,
@@ -39,9 +40,14 @@ export async function procedureDialog(procedure, onBegin) {
   );
   const dialog = openDialog(
     procedure.ten,
-    `<dl class="procedure-facts"><dt>Mã thủ tục</dt><dd>${esc(procedure.ma)}</dd><dt>Hướng dẫn</dt><dd class="preserve">${esc(procedure.moTa)}</dd><dt>Thời hạn giải quyết</dt><dd>${procedure.soNgaySLA} ${procedure.donViSLA === "NGAY_LAM_VIEC" ? "ngày làm việc" : "ngày lịch"} kể từ khi tiếp nhận</dd></dl><h3>Thành phần hồ sơ</h3><div class="table-scroll"><table class="case-table"><thead><tr><th>Thành phần</th><th>Yêu cầu</th><th>Hướng dẫn</th></tr></thead><tbody>${components.map((c) => `<tr><td>${esc(c.ten)}</td><td>${c.batBuoc ? "Bắt buộc" : "Theo trường hợp"}</td><td>${esc(c.huongDan)}</td></tr>`).join("")}</tbody></table></div>${onBegin ? '<div class="modal-footer"><button class="btn primary" data-begin>Nộp trực tuyến</button></div>' : ""}`,
+    `<dl class="procedure-facts"><dt>Mã thủ tục</dt><dd>${esc(procedure.ma)}</dd><dt>Hướng dẫn</dt><dd class="preserve">${esc(procedure.moTa)}</dd><dt>Thời hạn giải quyết</dt><dd>${procedure.soNgaySLA} ${procedure.donViSLA === "NGAY_LAM_VIEC" ? "ngày làm việc" : "ngày lịch"} kể từ khi tiếp nhận</dd></dl>
+    ${procedureDocuments(procedure, components)}
+    ${onBegin ? '<div class="modal-footer"><button class="btn primary" data-begin>Nộp trực tuyến</button></div>' : ""}`,
   );
-  if (onBegin) $("[data-begin]", dialog).onclick = onBegin;
+  if (onBegin) $("[data-begin]", dialog).onclick = () => {
+    dialog.close();
+    onBegin();
+  };
 }
 
 export async function publicPage(root, page, params, actor, onSignedIn) {
@@ -93,7 +99,7 @@ async function serviceList(root, actor, onAuth, query) {
     const submit = canSubmit
       ? `<button type="button" class="btn primary" data-begin="${esc(p.id)}">Nộp trực tuyến</button>`
       : "";
-    return `<article class="portal-procedure"><div><span class="procedure-code">Mã thủ tục ${esc(p.ma)}</span><h3>${esc(p.ten)}</h3><p>Thời hạn giải quyết: ${esc(p.soNgaySLA)} ${timeUnit} kể từ khi tiếp nhận.</p></div><div class="actions"><button type="button" class="btn" data-procedure="${esc(p.id)}">Xem thành phần</button>${submit}</div></article>`;
+    return `<article class="portal-procedure"><div><span class="procedure-code">Mã thủ tục ${esc(p.ma)}</span><h3>${esc(p.ten)}</h3><p>Thời hạn giải quyết: ${esc(p.soNgaySLA)} ${timeUnit} kể từ khi tiếp nhận.</p></div><div class="actions"><button type="button" class="btn" data-procedure="${esc(p.id)}">Xem giấy tờ cần nộp</button>${submit}</div></article>`;
   }).join("") || `<p class="empty">${term ? "Không tìm thấy thủ tục phù hợp." : "Chưa có thủ tục đang tiếp nhận trực tuyến."}</p>`;
   function beginProcedure(id) {
     if (actor) navigate("new", id);

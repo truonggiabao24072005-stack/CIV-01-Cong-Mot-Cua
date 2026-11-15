@@ -10,9 +10,11 @@ namespace CongMotCua.Api.Controllers;
 public class HoSoController(WorkflowService workflow, HoSoQueryService queries) : ControllerBase
 {
     [HttpGet("ho-so")]
-    public async Task<object> GetDanhSach(string? q, string? status, string? deadline, string? work, int page = 1, int pageSize = 10)
+    public async Task<object> GetDanhSach(string? q, string? status, string? deadline, string? work,
+        int page = 1, int pageSize = 10, string? thuTucId = null, string? sort = null, bool includeFilters = false)
     {
-        return await queries.List(await workflow.Actor(User), q, status, deadline, work, page, pageSize);
+        return await queries.List(await workflow.Actor(User), q, status, deadline, work, page, pageSize,
+            thuTucId, sort, includeFilters);
     }
 
     [HttpGet("thong-ke")]

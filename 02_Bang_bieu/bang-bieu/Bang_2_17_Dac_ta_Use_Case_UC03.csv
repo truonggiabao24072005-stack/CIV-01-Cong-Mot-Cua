@@ -1,15 +1,15 @@
-﻿Đặc tả use case UC03,Đặc tả use case UC03
+﻿Đặc tả use case UC03,
 Tên use case,Kiểm tra và tiếp nhận hồ sơ
 Actor,Cán bộ tiếp nhận
 Mô tả,Kiểm tra thành phần và xác nhận tiếp nhận hồ sơ đủ điều kiện.
 Tiền điều kiện (Precondition),"Hồ sơ đã gửi. Muốn tiếp nhận chính thức, hồ sơ phải không còn yêu cầu bổ sung mở."
 Hậu điều kiện (Postcondition),"Nếu đủ điều kiện, hồ sơ có mã chính thức, giấy tiếp nhận, ngày hẹn và trạng thái DA_TIEP_NHAN."
-Luồng sự kiện chính (Basic flow),Luồng sự kiện chính (Basic flow)
+Luồng sự kiện chính (Basic flow),
 Actor,Hệ thống
 1. Mở hồ sơ trong danh sách chờ kiểm tra.,"2. Hiển thị thành phần yêu cầu, bản tệp hiện hành và đánh giá đã có."
 3. Xem đánh giá đã có; ghi hoặc cập nhật đánh giá từng bản khi cần. Nhập lý do nếu chưa đạt.,4. Lưu đánh giá theo đúng mã bản tệp.
 5. Kiểm tra lại và xác nhận Tiếp nhận.,"6. Kiểm tra các bản hiện hành, cấp mã hồ sơ, lưu chính sách thời hạn và xác định ngày hẹn."
-Luồng sự kiện thay thế (Alternate flow),Luồng sự kiện thay thế (Alternate flow)
+Luồng sự kiện thay thế (Alternate flow),
 5.1. Chọn Yêu cầu bổ sung nếu thiếu sót có thể sửa.,5.2. Chuyển sang UC05 và lưu giai đoạn cần quay lại.
 5.3. Chọn từ chối và ghi căn cứ.,5.4. Công bố lý do. Hồ sơ chưa tiếp nhận vẫn chưa có hạn giải quyết.
 5.5. Tiếp nhận khi thiếu giấy tờ hoặc bản chưa đạt.,5.6. Chặn ghi nhận và giữ mã hồ sơ chính thức chưa được cấp.

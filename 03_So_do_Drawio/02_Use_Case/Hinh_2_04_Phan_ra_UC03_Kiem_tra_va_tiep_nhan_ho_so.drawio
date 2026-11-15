@@ -5,37 +5,40 @@
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
         <mxCell id="title" value="PHÂN RÃ KIỂM TRA VÀ TIẾP NHẬN HỒ SƠ" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Times New Roman;fontSize=38;fontStyle=1;fontColor=#000000;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="10" y="8" width="1430" height="64" as="geometry"/>
+          <mxGeometry x="5" y="5" width="1770" height="65" as="geometry"/>
         </mxCell>
-        <mxCell id="review" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;Đánh giá bản tài liệu&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;spacing=10;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=40;" vertex="1" parent="1">
-          <mxGeometry x="50" y="95" width="490" height="125" as="geometry"/>
+        <mxCell id="review" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;Đánh giá bản tài liệu&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;spacing=10;fontStyle=0;fillColor=#E9EDF0;strokeColor=#59636E;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=40;" vertex="1" parent="1">
+          <mxGeometry x="520" y="105" width="505" height="125" as="geometry"/>
         </mxCell>
-        <mxCell id="accept" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;Tiếp nhận hồ sơ&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;spacing=10;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=40;" vertex="1" parent="1">
-          <mxGeometry x="50" y="355" width="490" height="125" as="geometry"/>
+        <mxCell id="accept" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;Tiếp nhận hồ sơ&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;spacing=10;fontStyle=0;fillColor=#E9EDF0;strokeColor=#59636E;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=40;" vertex="1" parent="1">
+          <mxGeometry x="520" y="325" width="505" height="125" as="geometry"/>
         </mxCell>
-        <mxCell id="supplement" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;Yêu cầu bổ sung&lt;br&gt;(UC05)&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;spacing=10;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=40;" vertex="1" parent="1">
-          <mxGeometry x="50" y="615" width="490" height="125" as="geometry"/>
+        <mxCell id="supplement" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;Yêu cầu bổ sung&lt;br&gt;(UC05)&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;spacing=10;fontStyle=0;fillColor=#E9EDF0;strokeColor=#59636E;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=40;" vertex="1" parent="1">
+          <mxGeometry x="520" y="545" width="505" height="125" as="geometry"/>
         </mxCell>
-        <mxCell id="reject" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;Từ chối tiếp nhận&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;spacing=10;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=40;" vertex="1" parent="1">
-          <mxGeometry x="50" y="875" width="490" height="125" as="geometry"/>
+        <mxCell id="reject" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;Từ chối tiếp nhận&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;spacing=10;fontStyle=0;fillColor=#E9EDF0;strokeColor=#59636E;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=40;" vertex="1" parent="1">
+          <mxGeometry x="520" y="765" width="505" height="125" as="geometry"/>
         </mxCell>
-        <mxCell id="checks" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;Đối chiếu thành phần và&lt;br&gt;đánh giá&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;spacing=10;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=40;" vertex="1" parent="1">
-          <mxGeometry x="880" y="355" width="520" height="125" as="geometry"/>
+        <mxCell id="checks" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;Đối chiếu thành phần và&lt;br&gt;đánh giá&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;spacing=10;fontStyle=0;fillColor=#E9EDF0;strokeColor=#59636E;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=40;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="325" width="520" height="125" as="geometry"/>
         </mxCell>
-        <mxCell id="reason" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;Ghi căn cứ và lý do từ&lt;br&gt;chối&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;spacing=10;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=40;" vertex="1" parent="1">
-          <mxGeometry x="880" y="875" width="520" height="125" as="geometry"/>
+        <mxCell id="reason" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;Ghi căn cứ và lý do từ&lt;br&gt;chối&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;spacing=10;fontStyle=0;fillColor=#E9EDF0;strokeColor=#59636E;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=40;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="765" width="520" height="125" as="geometry"/>
         </mxCell>
-        <mxCell id="edge4" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;«include»&lt;/div&gt;" style="html=1;rounded=0;endArrow=open;endSize=16;endFill=0;startArrow=none;dashed=1;dashPattern=7 5;strokeWidth=1.5;strokeColor=#000000;exitX=1.000000;exitY=0.500000;entryX=0.000000;entryY=0.500000;exitPerimeter=0;entryPerimeter=0;labelWidth=135;fontSize=29;fontFamily=Times New Roman;fontColor=#000000;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="accept" target="checks">
+        <mxCell id="edge4" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;«include»&lt;/div&gt;" style="html=1;rounded=0;endArrow=open;endSize=16;endFill=0;startArrow=none;dashed=1;dashPattern=7 5;strokeWidth=1.5;strokeColor=#59636E;exitX=1.000000;exitY=0.500000;entryX=0.000000;entryY=0.500000;exitPerimeter=0;entryPerimeter=0;labelWidth=135;fontSize=29;fontFamily=Times New Roman;fontColor=#000000;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="accept" target="checks">
           <mxGeometry relative="1" x="0" y="0" as="geometry">
             <mxPoint x="0.0" y="0.0" as="offset"/>
           </mxGeometry>
         </mxCell>
-        <mxCell id="edge5" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;«include»&lt;/div&gt;" style="html=1;rounded=0;endArrow=open;endSize=16;endFill=0;startArrow=none;dashed=1;dashPattern=7 5;strokeWidth=1.5;strokeColor=#000000;exitX=1.000000;exitY=0.500000;entryX=0.000000;entryY=0.500000;exitPerimeter=0;entryPerimeter=0;labelWidth=135;fontSize=29;fontFamily=Times New Roman;fontColor=#000000;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="reject" target="reason">
+        <mxCell id="edge5" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;«include»&lt;/div&gt;" style="html=1;rounded=0;endArrow=open;endSize=16;endFill=0;startArrow=none;dashed=1;dashPattern=7 5;strokeWidth=1.5;strokeColor=#59636E;exitX=1.000000;exitY=0.500000;entryX=0.000000;entryY=0.500000;exitPerimeter=0;entryPerimeter=0;labelWidth=135;fontSize=29;fontFamily=Times New Roman;fontColor=#000000;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="reject" target="reason">
           <mxGeometry relative="1" x="0" y="0" as="geometry">
             <mxPoint x="0.0" y="0.0" as="offset"/>
           </mxGeometry>
         </mxCell>
-      </root>
+      <mxCell id="uc03" value="&lt;div style=&quot;line-height:1.05;&quot;&gt;UC03&lt;br&gt;Kiểm tra và&lt;br&gt;tiếp nhận hồ sơ&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;spacing=10;fontStyle=0;fillColor=#E9EDF0;strokeColor=#59636E;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=40;" vertex="1" parent="1">
+          <mxGeometry x="40" y="425" width="335" height="145" as="geometry"/>
+        </mxCell>
+        <mxCell id="generalize-review" parent="1" value="" edge="1" source="review" target="uc03" style="edgeStyle=none;html=1;strokeColor=#59636E;strokeWidth=2;endArrow=block;endFill=0;endSize=13;exitX=0;exitY=0.5;entryX=0.8;entryY=0.08;"><mxGeometry relative="1" as="geometry"/></mxCell><mxCell id="generalize-accept" parent="1" value="" edge="1" source="accept" target="uc03" style="edgeStyle=none;html=1;strokeColor=#59636E;strokeWidth=2;endArrow=block;endFill=0;endSize=13;exitX=0;exitY=0.5;entryX=1;entryY=0.36000000000000004;"><mxGeometry relative="1" as="geometry"/></mxCell><mxCell id="generalize-supplement" parent="1" value="" edge="1" source="supplement" target="uc03" style="edgeStyle=none;html=1;strokeColor=#59636E;strokeWidth=2;endArrow=block;endFill=0;endSize=13;exitX=0;exitY=0.5;entryX=1;entryY=0.64;"><mxGeometry relative="1" as="geometry"/></mxCell><mxCell id="generalize-reject" parent="1" value="" edge="1" source="reject" target="uc03" style="edgeStyle=none;html=1;strokeColor=#59636E;strokeWidth=2;endArrow=block;endFill=0;endSize=13;exitX=0;exitY=0.5;entryX=0.8;entryY=0.92;"><mxGeometry relative="1" as="geometry"/></mxCell></root>
     </mxGraphModel>
   </diagram>
   </mxfile>

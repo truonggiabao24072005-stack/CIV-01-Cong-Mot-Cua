@@ -15,17 +15,42 @@
         maxlength="200"
       />
     </div>
+    <select name="thuTucId" aria-label="Lọc thủ tục" disabled>
+      <option value="">Tất cả thủ tục</option>
+    </select>
     <select name="work" aria-label="Lọc việc cần làm">
       <option value="">Tất cả công việc</option>
       <option value="supplement" id="supplement-work-label">Bổ sung cần xử lý</option>
     </select>
     <select name="status" aria-label="Lọc trạng thái">
-      <option value="">Tất cả trạng thái</option></select
-    ><select name="deadline" aria-label="Lọc thời hạn">
+      <option value="">Tất cả trạng thái</option>
+    </select>
+    <select name="deadline" aria-label="Lọc thời hạn">
       <option value="">Tất cả thời hạn</option>
-      <option value="overdue">Đang quá hạn</option></select
-    ><button type="submit" class="btn primary">Lọc hồ sơ</button><button type="button" class="btn" id="clear-case-filter">Bỏ bộ lọc</button>
+      <option value="overdue">Đang quá hạn</option>
+    </select>
+    <div class="actions">
+      <button type="submit" class="btn primary">Lọc hồ sơ</button>
+      <button type="button" class="btn" id="clear-case-filter">Bỏ bộ lọc</button>
+    </div>
   </form>
+  <div class="case-list-controls">
+    <strong id="case-total" role="status"></strong>
+    <label>Sắp xếp
+      <select name="sort" form="case-filter">
+        <option value="">Mới nộp trước</option>
+        <option value="oldest">Nộp sớm trước</option>
+        <option value="deadline">Hẹn trả gần nhất</option>
+      </select>
+    </label>
+    <label>Số hồ sơ mỗi trang
+      <select name="pageSize" form="case-filter">
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+      </select>
+    </label>
+  </div>
   <p data-error class="error-box" role="alert" hidden></p>
   <div id="case-list"></div>
   <div class="pagination">
